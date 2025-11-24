@@ -1,53 +1,20 @@
-@font-face {
-    font-family: "JetBrains Sans";
-    src: url("fonts/JetBrainsSans-Regular.woff2");
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-@font-face {
-    font-family: "JetBrains Mono";
-    src: url("fonts/JetBrainsMono-Regular.woff2");
-}
-
-:root {
-    font-family: "JetBrains Sans", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    font-weight: 300;
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #000000;
-    text-align: center;
+* {
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0;
+    font-family: "Poppins", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    min-width: 320px;
-    min-height: 100vh;
-    align-items: center;
-
-    background-image: url("background.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
+    color: white;
+    font-size: calc(10px + 1vmin);
 }
 
-h1 {
-    font-size: 29px;
-    line-height: 39px;
-    font-weight: 300;
-}
-
-.title {
-    margin-bottom: 40px;
-}
-
-#app {
-    max-width: 1280px;
-}
-
-.logo {
-    margin-top: 45px;
-    margin-left: 20%;
-    align-self: flex-start;
+a {
+    text-decoration: none;
 }
 
 img {
@@ -55,133 +22,88 @@ img {
     height: auto;
 }
 
-.counter {
-    font-family: "JetBrains Mono", Inter, system-ui, sans-serif;
-    font-weight: 400;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 60px;
-    color: rgba(255, 255, 255, 1);
-}
-
-.counter-interaction {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px 0;
-    width: 470px;
-    justify-content: space-between;
-}
-
-.counter-interaction button {
-    width: 48%;
-    height: 47%;
-    align-content: space-between;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 120px;
-    font-size: 68px;
-    text-align: center;
-}
-
-.counter-interaction button:nth-child(2n+1) {
-    margin-right: 14px;
-}
-
-.counter-interaction button:disabled {
-    color: rgba(255, 255, 255, 0.5);
-    background-image: none;
-    border-color: inherit;
-}
-
-.counter-info {
-    width: 360px;
-    height: 345px;
-    margin-right: 27px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    background-color: rgba(25, 25, 28, 0.5);
-    border-radius: 29px;
-}
-
-.counter-text {
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 24px;
-    margin-top: 60px;
-    margin-bottom: 28px;
-
-}
-
-.counter-value {
-    font-weight: 200;
-    font-size: 170px;
-    margin: 0;
-    padding: 0;
-    line-height: 1;
-}
-
 button {
-    font-family: "JetBrains Mono", Inter, system-ui, sans-serif;
+    font-family: "Roboto", Inter, system-ui, sans-serif;
     background-color: rgba(25, 25, 28, 0.5);
     cursor: pointer;
     color: rgba(255, 255, 255, 1);
 }
 
-button:hover {
-    background-image: radial-gradient(
-            farthest-corner at 77% 83%,
-            rgba(1, 197, 245, 0.5) 2%,
-            rgba(1, 126, 254, 0.5) 28%,
-            rgba(25, 25, 28, 0) 70%
-    );
-    border: 1px solid rgba(76, 166, 255, 0.2);
-    background-clip: padding-box;
+.gradient_background {
+    background: #000000;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 25%, rgba(12, 39, 56, 1) 100%);
+    width: 100%;
 }
 
-.technologies {
-    margin-bottom: 36px;
-    align-self: center;
+.container {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 50px;
+    padding-top: 20px;
 }
 
-.technologies img {
-    max-width: fit-content;
+header {
+    padding: 1% 0% 1%;
 }
 
+header .logo {
+    text-transform: uppercase;
+    font-size: 100px;
+    font-weight: 800;
+}
 
-@media (max-width: 875px) {
+header nav {
+    padding-top: 50px;
+    float: right;
+    width: 25%;
+}
 
-    .logo {
-        margin-top: 10px;
-    }
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
 
-    .title {
-        margin-bottom: 30px;
-    }
+header nav ul li .top_bubble {
+    display: inline-block;
+    padding: 10px 15px;
+}
 
-    .counter {
-        flex-direction: column;
-        padding: 0;
-        margin-bottom: 0;
-    }
+header nav ul li a {
+    color: white;
+}
 
-    .counter-info {
-        width: 100%;
-        height: 300px;
-        margin-right: 0;
-        margin-bottom: 15px;
-    }
+header nav ul li:not(.active) a:hover {
+    border-bottom: 5px solid #164969;
+    transition: all 250ms ease;
+}
 
-    .counter-interaction {
-        display: flex;
-        flex-direction: row;
-        height: auto;
-        width: auto;
-    }
+.two-columns {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 100px;
+}
 
-    .counter-interaction button {
-        width: 47%;
-        height: 100px;
-        margin-right: 0;
-        margin-bottom: 15px;
-    }
+.hero {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-weight: 300;
+    line-height: 170%;
+}
+
+.hero h2 {
+    color: #164969;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.two-columns img {
+    width: clamp(600px, 50%, 1000px);
+    height: auto;
+}
+
+.wallpaper {
+    width: 100%;
 }
