@@ -4,58 +4,105 @@
 <head>
     <meta charset="UTF-8"/>
     <!--    todo change icon-->
-    <link rel="icon" type="image/svg+xml" href="/public/webstorm-icon-logo.svg"/>
+    <link rel="icon" type="image/svg+xml" href="/public/static/logo.png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Супер-сайт</title>
-    <!--    todo change style.css-->
     <link rel="stylesheet" href="public/style.css">
 </head>
 
 <body>
 
 <div class="gradient_background">
+    <img class='wallpaper' src="public/static/long_wallpaper.jpg" alt="wallpaper">
+
     <header class="container">
-        <span class="logo">Logo</span>
+        <span class="logo">Приглашение</span>
         <!--        todo make a bubble on the right side of page-->
-        <nav>
-            <ul>
-                <li><a href="/" class="top_bubble active">Менюха 1</a></li>
-                <li><a href="/survey" class="top_bubble">Менюха 2</a></li>
-            </ul>
-        </nav>
+        <!--        <nav>-->
+        <!--            <ul>-->
+        <!--                <li><a href="/" class="top_bubble active">Наверх</a></li>-->
+        <!--                <li><a href="/survey" class="top_bubble">Анкета гостя</a></li>-->
+        <!--            </ul>-->
+        <!--        </nav>-->
+        <br>
+        <h2>на празднование нашего бракосочетания!</h2>
+        <br><br><br>
     </header>
+
     <div class="container">
         <div class="two-columns">
             <div class="hero">
-                <h2>Header!</h2>
+                <h2>Где собираемся?</h2>
+                <br><br><br>
+                <p>ТРЦ Левый берег, Ленинский проспект, 1д</p>
                 <br>
-                Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque
-                sem placerat.
-                In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor.
-                Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia
-                integer nunc posuere.
-                Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos
-                himenaeos.
+                <h1>Стейк-хаус PANORAMA</h1>
+                <br>
+                <p>Малый банкетный зал</p>
             </div>
-            <img src="public/static/logotip.jpg" alt="logotip">
+            <div class="hero">
+                <h2>Когда?</h2>
+                <br><br><br>
+                <p>Начало: <b>18:00</b></p>
+                <p>Конец: <b>22:00</b></p>
+            </div>
+            <img src="public/static/map.jpg" alt="logotip">
         </div>
     </div>
 </div>
 
+<!--todo вертушка с панорамой-->
 <img class='wallpaper' src="public/static/wallpaper.jpg" alt="wallpaper">
 
 <div class="gradient_background">
     <div class="container">
         <div class="hero">
-            <h2>Header!</h2>
+            <h2>Анкета гостя</h2>
+            <br><br><br>
+            <p><b>Представьтесь, пожалуйста. Если вы планируете прийти с супругом/супругой или другими членами семьи,
+                укажите все имена.</b></p>
+            <input type="text">
             <br>
-            Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque
-            sem placerat.
-            In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor.
-            Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia
-            integer nunc posuere.
-            Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos
-            himenaeos.
+            <p><b>Какие напитки предпочитаете?</b></p>
+            <div class="two-columns">
+                <div>
+                    <input type="checkbox"> <span>Вино белое</span>
+                </div>
+                <div>
+                    <input type="checkbox"> <span>Вино красное</span>
+                </div>
+                <div>
+                    <input type="checkbox"> <span>Шампанское</span>
+                </div>
+                <div>
+                    <input type="checkbox"> <span>Коньяк</span>
+                </div>
+                <div>
+                    <input type="checkbox"> <span>Безалкогольные напитки</span>
+                </div>
+            </div>
+            <br>
+            <p><b>Основное блюдо:</b></p>
+            <div class="two-columns">
+                <div>
+                    <input type="radio"> <span>Птица</span>
+                </div>
+                <div>
+                    <input type="radio"> <span>Красное мясо</span>
+                </div>
+                <div>
+                    <input type="radio"> <span>Рыба</span>
+                </div>
+                <div>
+                    <input type="radio"> <span>Вегетарианское блюдо</span>
+                </div>
+            </div>
+            <br>
+            <p><b>Укажите аллергены, если таковые есть:</b></p>
+            <input type="text">
+
+            <br>
+            <button class>Отправить ответ</button>
         </div>
     </div>
 </div>
