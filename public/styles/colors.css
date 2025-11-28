@@ -1,0 +1,10 @@
+:root {
+    --color-accent: #C48C1A;
+    --color-bg: #000000;
+    --color-bg-second: #241B07;
+}
+/*todo look into it later*/
+/*[data-theme="light"] {*/
+/*    --text-color: #eee;*/
+/*    --bg-color: #111;*/
+/*}*/

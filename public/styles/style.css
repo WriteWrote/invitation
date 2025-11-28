@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('./colors.css');
 
 * {
     margin: 0;
@@ -22,25 +23,35 @@ img {
     height: auto;
 }
 
-button {
-    font-family: "Roboto", Inter, system-ui, sans-serif;
-    background-color: rgba(25, 25, 28, 0.5);
-    cursor: pointer;
-    color: rgba(255, 255, 255, 1);
-}
+/*button {*/
+/*    font-family: "Roboto", Inter, system-ui, sans-serif;*/
+/*    background-color: rgba(25, 25, 28, 0.5);*/
+/*    cursor: pointer;*/
+/*    color: rgba(255, 255, 255, 1);*/
+/*}*/
 
 .gradient_background {
-    background: #000000;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 25%, rgba(12, 39, 56, 1) 100%);
+    background: var(--color-bg);
+    background: linear-gradient(
+            180deg,
+            var(--color-bg) 70%,
+            var(--color-bg-second) 110%
+    );
     width: 100%;
+}
+
+.image_background {
+    width: 100%;
+    background: url("../static/panorama_logo.jpg") no-repeat center center fixed;
+    background-size: cover;
 }
 
 .container {
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
-    padding-bottom: 50px;
-    padding-top: 20px;
+    padding-bottom: 100px;
+    padding-top: 50px;
 }
 
 header {
@@ -51,6 +62,7 @@ header .logo {
     text-transform: uppercase;
     font-size: 100px;
     font-weight: 800;
+    color: var(--color-accent);
 }
 
 header nav {
@@ -75,7 +87,7 @@ header nav ul li a {
 }
 
 header nav ul li:not(.active) a:hover {
-    border-bottom: 5px solid #164969;
+    border-bottom: 5px solid var(--color-accent);
     transition: all 250ms ease;
 }
 
@@ -86,6 +98,26 @@ header nav ul li:not(.active) a:hover {
     gap: 100px;
 }
 
+.tile-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px 0;
+}
+
+.tile img {
+    height: 700px;
+    width: 500px;
+    border-radius: 2.5%;
+}
+
+.tile {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
 .hero {
     padding-top: 50px;
     padding-bottom: 20px;
@@ -94,7 +126,7 @@ header nav ul li:not(.active) a:hover {
 }
 
 .hero h2 {
-    color: #164969;
+    color: var(--color-accent);
     font-size: 50px;
     font-weight: 600;
 }
