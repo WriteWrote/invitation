@@ -10,12 +10,17 @@ body {
     font-family: "Poppins", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    color: white;
-    font-size: calc(10px + 1vmin);
+    color: var(--color-light);
+    font-size: calc(15px + 1vmin);
 }
 
 a {
     text-decoration: none;
+}
+
+a:hover {
+    border-bottom: 5px solid var(--color-accent);
+    transition: all 250ms ease;
 }
 
 img {
@@ -23,26 +28,20 @@ img {
     height: auto;
 }
 
-/*button {*/
-/*    font-family: "Roboto", Inter, system-ui, sans-serif;*/
-/*    background-color: rgba(25, 25, 28, 0.5);*/
-/*    cursor: pointer;*/
-/*    color: rgba(255, 255, 255, 1);*/
-/*}*/
-
 .gradient_background {
     background: var(--color-bg);
     background: linear-gradient(
             180deg,
-            var(--color-bg) 70%,
-            var(--color-bg-second) 110%
+            var(--color-bg) 30%,
+            var(--color-bg-second) 43%,
+            var(--color-bg) 75%
     );
     width: 100%;
 }
 
 .image_background {
     width: 100%;
-    background: url("../static/panorama_logo.jpg") no-repeat center center fixed;
+    background: url("../static/backgrounds/panorama_background_2.jpg") no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -83,12 +82,7 @@ header nav ul li .top_bubble {
 }
 
 header nav ul li a {
-    color: white;
-}
-
-header nav ul li:not(.active) a:hover {
-    border-bottom: 5px solid var(--color-accent);
-    transition: all 250ms ease;
+    color: var(--color-accent);
 }
 
 .two-columns {
@@ -138,4 +132,55 @@ header nav ul li:not(.active) a:hover {
 
 .wallpaper {
     width: 100%;
+}
+
+.survey-form {
+    padding-top: 50px;
+}
+
+.survey-question {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.survey-question h3 {
+    padding-bottom: 15px;
+    color: var(--color-light);
+    font-weight: 400;
+}
+
+.survey-answer-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 20px;
+    width: 50%;
+}
+
+.survey-answer-group label {
+    font-weight: 300;
+    color: var(--color-light);
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.survey-question input {
+    background: var(--color-bg-second);
+    border-radius: 10px;
+    border: 1px solid var(--color-light);
+    padding: 10px 10px;
+    outline: none;
+    font-size: 100%;
+    color: var(--color-light);
+}
+
+.survey-submit-button {
+    background: transparent;
+    cursor: pointer;
+    padding: 20px 10px;
+    font-weight: 500;
+    font-size: 120%;
+    color: var(--color-accent);
 }

@@ -1,7 +1,8 @@
 :root {
     --color-accent: #C48C1A;
     --color-bg: #000000;
-    --color-bg-second: #241B07;
+    --color-bg-second: #131313;
+    --color-light: rgba(250, 250, 250, 0.88);
 }
 /*todo look into it later*/
 /*[data-theme="light"] {*/
