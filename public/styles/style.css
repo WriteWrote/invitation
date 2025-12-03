@@ -184,3 +184,32 @@ header nav ul li a {
     font-size: 120%;
     color: var(--color-accent);
 }
+
+.masonry {
+    margin: 0 auto;
+}
+
+.masonry .item {
+    display: block;
+    width: 400px;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.masonry img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 2.5%;
+    object-fit: cover;
+}
+.masonry .big {
+    height: 800px;
+    width: 600px;
+}
+
+.masonry .small {
+    height: 500px;
+    width: 300px;
+}
