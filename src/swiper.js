@@ -16,4 +16,21 @@ new Swiper('.swiper', {
     el: '.swiper-pagination',
     clickable: true,
   },
+  breakpoints: {
+    0: {
+      // для ширины экрана 0px и больше
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    768: {
+      // для планшетов и выше
+      slidesPerView: 2,
+      spaceBetween: 15,
+    },
+    1024: {
+      // для десктопа
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+  },
 });

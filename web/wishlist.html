@@ -1,172 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <link rel="icon" type="image/svg+xml" href="/icons/hearts.png"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Супер-сайт</title>
-    <link rel="stylesheet" href="../public/styles/style.css">
-    <base href="../../../invitation/">
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/icons/hearts.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Супер-сайт</title>
+  <link rel="stylesheet" href="../public/styles/style.css">
+  <base href="../../../invitation/">
 </head>
 
 <body>
 
 <div class="simple_background">
-    <header class="container">
-        <nav>
-            <ul>
-                <li><a href="index.html" class="top_bubble">Назад</a></li>
-            </ul>
-        </nav>
+  <header>
+    <div class="container">
+      <div class="left-bubble">
         <span class="logo">Виш-лист</span>
-        <br>
-<!--        <p>Если у вас возникнет желание порадовать нашу пару подарком, <br>вы можете выбрать один из вариантов в списке,-->
-<!--            который мы составили, чтобы упростить вам задачу выбора:</p>-->
-    </header>
-
-    <div class="container hero">
-        <div class="masonry">
-            <div class="card small" data-qr="https://example.com">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img src="../public/static/wishtiles/empty_tile.png" alt="tile" class="empty_tile">
-                    </div>
-                </div>
-            </div>
-            <div class="card big" data-qr="https://example.com">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img src="../public/static/wishtiles/bedsheets.webp" alt="tile">
-                    </div>
-                    <div class="card-back">
-                        <canvas class="qr-code"></canvas>
-                        <span class="slide-label">Постельное белье</span>
-                    </div>
-                </div>
-            </div>
-            <div class="card" data-qr="https://www.ozon.ru/product/fen-laifen-mini-1834732063/">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img src="../public/static/wishtiles/hairdryer.jpg" alt="tile">
-                    </div>
-                    <div class="card-back">
-                        <canvas class="qr-code"></canvas>
-                        <span class="slide-label">Фен Laifen Mini</span>
-                    </div>
-                </div>
-            </div>
-            <div class="card small" data-qr="https://example.com">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img src="../public/static/wishtiles/empty_tile.png" alt="tile" class="empty_tile">
-                    </div>
-                </div>
-            </div>
-            <div class="card"
-                 data-qr="https://www.ozon.ru/product/kuhonnaya-mashina-weissgauff-wkm-791-mpt-multi-chef-4-v-1-planetarnyy-mikser-s-chashey-7-l-blender-1794274223/">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img src="../public/static/wishtiles/kitchen_machine.jpg" alt="tile">
-                    </div>
-                    <div class="card-back">
-                        <canvas class="qr-code"></canvas>
-                        <span class="slide-label">Кухонный комбайн</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card big"
-                 data-qr="https://www.ozon.ru/product/poster-karty-goroda-voronezh-30h40sm-bez-ramy-838391740/">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img src="../public/static/wishtiles/poster.jpg" alt="tile">
-                    </div>
-                    <div class="card-back">
-                        <canvas class="qr-code"></canvas>
-                        <span class="slide-label">Постер "Воронеж"</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card" data-qr="https://www.ozon.ru/product/fotoalbom-iz-velyura-24-24-sm-myalbums-1935042425/">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img src="../public/static/wishtiles/photoalbum.webp" alt="tile">
-                    </div>
-                    <div class="card-back">
-                        <canvas class="qr-code"></canvas>
-                        <span class="slide-label">Фотоальбом</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card small" data-qr="https://example.com">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img src="../public/static/wishtiles/perfumes.webp" alt="tile">
-                    </div>
-                    <div class="card-back">
-                        <canvas class="qr-code"></canvas>
-                        <span class="slide-label">Парфюм для дома</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card big"
-                 data-qr="https://www.ozon.ru/product/anapskiy-mayak-derevyannyy-konstruktor-1611899595/">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img src="../public/static/wishtiles/lighttower.webp" alt="tile">
-                    </div>
-                    <div class="card-back">
-                        <canvas class="qr-code"></canvas>
-                        <span class="slide-label">Конструктор "Анапский маяк"</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card small" data-qr="https://example.com">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img src="../public/static/wishtiles/chess.webp" alt="tile">
-                    </div>
-                    <div class="card-back">
-                        <canvas class="qr-code"></canvas>
-                        <span class="slide-label">Шахматы</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card small" data-qr="https://example.com">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img src="../public/static/wishtiles/empty_tile.png" alt="tile" class="empty_tile">
-                    </div>
-                </div>
-            </div>
-
-            <div class="card"
-                 data-qr="https://www.ozon.ru/product/nastolnaya-igra-bunker-3-2-kvest-dlya-kompanii-vzroslyh-ekonomikus-1639681733/">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img src="../public/static/wishtiles/game.webp" alt="tile">
-                    </div>
-                    <div class="card-back">
-                        <canvas class="qr-code"></canvas>
-                        <span class="slide-label">Настольная игра "Бункер"</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+        <p>Если у вас возникнет желание порадовать нашу пару подарком, вы можете выбрать один из вариантов в списке,
+          который мы составили, чтобы упростить вам задачу выбора:</p>
+      </div>
+      <div class="right-bubble">
+        <nav>
+          <ul>
+            <li><a href="index.html">Назад</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
+  </header>
+
+  <div class="container hero">
+    <div class="masonry">
+      <div class="card small" data-qr="https://example.com">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="../public/static/wishtiles/empty_tile.png" alt="tile" class="empty_tile">
+          </div>
+        </div>
+      </div>
+      <div class="card big" data-qr="https://example.com">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="../public/static/wishtiles/bedsheets.webp" alt="tile">
+          </div>
+          <div class="card-back">
+            <canvas class="qr-code"></canvas>
+            <span class="slide-label">Постельное белье</span>
+          </div>
+        </div>
+      </div>
+      <div class="card" data-qr="https://www.ozon.ru/product/fen-laifen-mini-1834732063/">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="../public/static/wishtiles/hairdryer.jpg" alt="tile">
+          </div>
+          <div class="card-back">
+            <canvas class="qr-code"></canvas>
+            <span class="slide-label">Фен Laifen Mini</span>
+          </div>
+        </div>
+      </div>
+      <div class="card small" data-qr="https://example.com">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="../public/static/wishtiles/empty_tile.png" alt="tile" class="empty_tile">
+          </div>
+        </div>
+      </div>
+      <div class="card"
+           data-qr="https://www.ozon.ru/product/kuhonnaya-mashina-weissgauff-wkm-791-mpt-multi-chef-4-v-1-planetarnyy-mikser-s-chashey-7-l-blender-1794274223/">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="../public/static/wishtiles/kitchen_machine.jpg" alt="tile">
+          </div>
+          <div class="card-back">
+            <canvas class="qr-code"></canvas>
+            <span class="slide-label">Кухонный комбайн</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card big"
+           data-qr="https://www.ozon.ru/product/poster-karty-goroda-voronezh-30h40sm-bez-ramy-838391740/">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="../public/static/wishtiles/poster.jpg" alt="tile">
+          </div>
+          <div class="card-back">
+            <canvas class="qr-code"></canvas>
+            <span class="slide-label">Постер "Воронеж"</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-qr="https://www.ozon.ru/product/fotoalbom-iz-velyura-24-24-sm-myalbums-1935042425/">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="../public/static/wishtiles/photoalbum.webp" alt="tile">
+          </div>
+          <div class="card-back">
+            <canvas class="qr-code"></canvas>
+            <span class="slide-label">Фотоальбом</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card small" data-qr="https://example.com">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="../public/static/wishtiles/perfumes.webp" alt="tile">
+          </div>
+          <div class="card-back">
+            <canvas class="qr-code"></canvas>
+            <span class="slide-label">Парфюм для дома</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card big"
+           data-qr="https://www.ozon.ru/product/anapskiy-mayak-derevyannyy-konstruktor-1611899595/">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="../public/static/wishtiles/lighttower.webp" alt="tile">
+          </div>
+          <div class="card-back">
+            <canvas class="qr-code"></canvas>
+            <span class="slide-label">Конструктор "Анапский маяк"</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card small" data-qr="https://example.com">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="../public/static/wishtiles/chess.webp" alt="tile">
+          </div>
+          <div class="card-back">
+            <canvas class="qr-code"></canvas>
+            <span class="slide-label">Шахматы</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card small" data-qr="https://example.com">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="../public/static/wishtiles/empty_tile.png" alt="tile" class="empty_tile">
+          </div>
+        </div>
+      </div>
+
+      <div class="card"
+           data-qr="https://www.ozon.ru/product/nastolnaya-igra-bunker-3-2-kvest-dlya-kompanii-vzroslyh-ekonomikus-1639681733/">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="../public/static/wishtiles/game.webp" alt="tile">
+          </div>
+          <div class="card-back">
+            <canvas class="qr-code"></canvas>
+            <span class="slide-label">Настольная игра "Бункер"</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
 
 <script type="module" src="../src/cardflip.js"></script>
 <script type="module" src="../src/masonry.js"></script>
-<script type="module" src="../src/cardinflate.js"></script>
+<script type="module" src="../src/cardfocus.js"></script>
 
 </body>
 </html>
