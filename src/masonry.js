@@ -1,27 +1,49 @@
 import Masonry from 'https://cdn.jsdelivr.net/npm/masonry-layout@4/+esm';
 
-new Masonry('.masonry', {
-  itemSelector: '.item',
-  columnWidth: 50,
-  percentPosition: true,
-  gutter: 20,
+async function waitForImages(selector) {
+  const imgs = document.querySelectorAll(selector);
+  await Promise.all(Array.from(imgs).map(img => {
+    if (img.complete) return Promise.resolve();
+    return new Promise(resolve => img.addEventListener('load', resolve));
+  }));
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
+  await waitForImages('.card img');
+
+  initMasonry();
 });
 
-const items = document.querySelectorAll('.masonry .item');
+let masonryLayout = undefined;
 
-items.forEach(item => {
-  item.addEventListener('mouseenter', () => {
-    items.forEach(other => {
-      if (other !== item) {
-        // вычисляем расстояние по X
-        const distance = other.offsetLeft - item.offsetLeft;
-        // сдвигаем в зависимости от расстояния
-        other.style.transform = `translateX(${distance > 0 ? 10 : -10}px) scale(0.98)`;
-      }
-    });
+function initMasonry() {
+  masonryLayout = new Masonry('.masonry', {
+    itemSelector: '.card',
+    columnWidth: 50,
+    // columnWidth: '.card',
+    percentPosition: true,
+    gutter: 20,
   });
+}
 
-  item.addEventListener('mouseleave', () => {
-    items.forEach(other => other.style.transform = 'scale(1) translateX(0)');
-  });
-});
+// const allImgs = document.querySelectorAll('.masonry .card img');
+// let loadedCount = 0;
+//
+// allImgs.forEach((img) => {
+//   if (img.complete) {
+//     loadedCount++;
+//   } else {
+//     img.addEventListener('load', () => {
+//       loadedCount++;
+//     });
+//   }
+// });
+
+// const checkAndInit = setInterval(() => {
+//   if (loadedCount === allImgs.length) {
+//     clearInterval(checkAndInit);
+//     initMasonry()
+//   }
+// }, 50);
+
+export { masonryLayout };

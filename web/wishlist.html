@@ -20,92 +20,153 @@
         </nav>
         <span class="logo">Виш-лист</span>
         <br>
-        <p>Если у вас возникнет желание порадовать нашу пару подарком, <br>вы можете выбрать один из вариантов в списке,
-            который мы составили, чтобы упростить вам задачу выбора:</p>
+<!--        <p>Если у вас возникнет желание порадовать нашу пару подарком, <br>вы можете выбрать один из вариантов в списке,-->
+<!--            который мы составили, чтобы упростить вам задачу выбора:</p>-->
     </header>
 
     <div class="container hero">
         <div class="masonry">
-            <div class="item small"><img src="../public/static/wishtiles/empty_tile.png" alt="tile" ></div>
-            <div class="item big"><img src="../public/static/wishtiles/bedsheets.webp" alt="tile"></div>
-            <div class="item"><img src="../public/static/wishtiles/hairdryer.jpg" alt="tile"></div>
-            <div class="item small"><img src="../public/static/wishtiles/empty_tile.png" alt="tile"></div>
+            <div class="card small" data-qr="https://example.com">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="../public/static/wishtiles/empty_tile.png" alt="tile" class="empty_tile">
+                    </div>
+                </div>
+            </div>
+            <div class="card big" data-qr="https://example.com">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="../public/static/wishtiles/bedsheets.webp" alt="tile">
+                    </div>
+                    <div class="card-back">
+                        <canvas class="qr-code"></canvas>
+                        <span class="slide-label">Постельное белье</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card" data-qr="https://www.ozon.ru/product/fen-laifen-mini-1834732063/">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="../public/static/wishtiles/hairdryer.jpg" alt="tile">
+                    </div>
+                    <div class="card-back">
+                        <canvas class="qr-code"></canvas>
+                        <span class="slide-label">Фен Laifen Mini</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card small" data-qr="https://example.com">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="../public/static/wishtiles/empty_tile.png" alt="tile" class="empty_tile">
+                    </div>
+                </div>
+            </div>
+            <div class="card"
+                 data-qr="https://www.ozon.ru/product/kuhonnaya-mashina-weissgauff-wkm-791-mpt-multi-chef-4-v-1-planetarnyy-mikser-s-chashey-7-l-blender-1794274223/">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="../public/static/wishtiles/kitchen_machine.jpg" alt="tile">
+                    </div>
+                    <div class="card-back">
+                        <canvas class="qr-code"></canvas>
+                        <span class="slide-label">Кухонный комбайн</span>
+                    </div>
+                </div>
+            </div>
 
-            <div class="item"><img src="../public/static/wishtiles/kitchen_machine.jpg" alt="tile"></div>
-            <div class="item big"><img src="../public/static/wishtiles/poster.jpg" alt="tile"></div>
-            <div class="item"><img src="../public/static/wishtiles/photoalbum.webp" alt="tile"></div>
-            <div class="item small"><img src="../public/static/wishtiles/perfumes.webp" alt="tile"></div>
-            <div class="item big"><img src="../public/static/wishtiles/lighttower.webp" alt="tile"></div>
-            <div class="item small"><img src="../public/static/wishtiles/chess.webp" alt="tile"></div>
+            <div class="card big"
+                 data-qr="https://www.ozon.ru/product/poster-karty-goroda-voronezh-30h40sm-bez-ramy-838391740/">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="../public/static/wishtiles/poster.jpg" alt="tile">
+                    </div>
+                    <div class="card-back">
+                        <canvas class="qr-code"></canvas>
+                        <span class="slide-label">Постер "Воронеж"</span>
+                    </div>
+                </div>
+            </div>
 
-            <div class="item small"><img src="../public/static/wishtiles/empty_tile.png" alt="tile"></div>
-            <div class="item"><img src="../public/static/wishtiles/game.webp" alt="tile"></div>
-            <div class="item small"><img src="../public/static/wishtiles/empty_tile.png" alt="tile"></div>
+            <div class="card" data-qr="https://www.ozon.ru/product/fotoalbom-iz-velyura-24-24-sm-myalbums-1935042425/">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="../public/static/wishtiles/photoalbum.webp" alt="tile">
+                    </div>
+                    <div class="card-back">
+                        <canvas class="qr-code"></canvas>
+                        <span class="slide-label">Фотоальбом</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card small" data-qr="https://example.com">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="../public/static/wishtiles/perfumes.webp" alt="tile">
+                    </div>
+                    <div class="card-back">
+                        <canvas class="qr-code"></canvas>
+                        <span class="slide-label">Парфюм для дома</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card big"
+                 data-qr="https://www.ozon.ru/product/anapskiy-mayak-derevyannyy-konstruktor-1611899595/">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="../public/static/wishtiles/lighttower.webp" alt="tile">
+                    </div>
+                    <div class="card-back">
+                        <canvas class="qr-code"></canvas>
+                        <span class="slide-label">Конструктор "Анапский маяк"</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card small" data-qr="https://example.com">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="../public/static/wishtiles/chess.webp" alt="tile">
+                    </div>
+                    <div class="card-back">
+                        <canvas class="qr-code"></canvas>
+                        <span class="slide-label">Шахматы</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card small" data-qr="https://example.com">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="../public/static/wishtiles/empty_tile.png" alt="tile" class="empty_tile">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card"
+                 data-qr="https://www.ozon.ru/product/nastolnaya-igra-bunker-3-2-kvest-dlya-kompanii-vzroslyh-ekonomikus-1639681733/">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="../public/static/wishtiles/game.webp" alt="tile">
+                    </div>
+                    <div class="card-back">
+                        <canvas class="qr-code"></canvas>
+                        <span class="slide-label">Настольная игра "Бункер"</span>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <!--        <div class="tile-section">-->
-        <!--            <div class="tile">-->
-        <!--                <img src="public/static/wishtiles/hairdryer.jpg" alt="tile">-->
-        <!--&lt;!&ndash;                <span class="tile">https://www.ozon.ru/product/fen-laifen-mini-1834732063/</span>&ndash;&gt;-->
-        <!--            </div>-->
-        <!--            <div class="tile">-->
-        <!--                <img src="public/static/wishtiles/bedsheets.webp" alt="tile">-->
-        <!--&lt;!&ndash;                https://www.ozon.ru/product/anapskiy-mayak-derevyannyy-konstruktor-1611899595/&ndash;&gt;-->
-        <!--            </div>-->
-        <!--            <div class="tile">-->
-        <!--                <img src="public/static/wishtiles/kitchen_machine.jpg" alt="tile">-->
-        <!--&lt;!&ndash;                <span class="tile">https://www.ozon.ru/product/kuhonnaya-mashina-weissgauff-wkm-791-mpt-multi-chef-4-v-1-planetarnyy-mikser-s-chashey-7-l-blender-1794274223/?oos_search=false</span>&ndash;&gt;-->
-        <!--            </div>-->
-        <!--        </div>-->
-
-        <!--        <div class="tile-section">-->
-        <!--            <div class="tile">-->
-        <!--                <img src="public/static/wishtiles/perfumes.webp" alt="tile">-->
-        <!--            </div>-->
-        <!--            <div class="tile">-->
-        <!--                <img src="public/static/wishtiles/poster.jpg" alt="tile">-->
-        <!--&lt;!&ndash;                <span class="tile">https://www.ozon.ru/product/poster-karty-goroda-voronezh-30h40sm-bez-ramy-838391740/</span>&ndash;&gt;-->
-        <!--            </div>-->
-        <!--            <div class="tile">-->
-        <!--                <img src="public/static/wishtiles/game.webp" alt="tile">-->
-        <!--&lt;!&ndash;                <span class="tile">https://www.ozon.ru/product/nastolnaya-igra-bunker-3-2-kvest-dlya-kompanii-vzroslyh-ekonomikus-1639681733/</span>&ndash;&gt;-->
-        <!--            </div>-->
-        <!--        </div>-->
-
-        <!--        <div class="tile-section">-->
-        <!--            <div class="tile">-->
-        <!--                <img src="public/static/wishtiles/photoalbum.webp" alt="tile">-->
-        <!--&lt;!&ndash;                https://www.ozon.ru/product/fotoalbom-iz-velyura-24-24-sm-myalbums-1935042425/&ndash;&gt;-->
-        <!--            </div>-->
-        <!--            <div class="tile">-->
-        <!--                <img src="public/static/wishtiles/chess.webp" alt="tile">-->
-        <!--&lt;!&ndash;                https://www.ozon.ru/product/fotoalbom-iz-velyura-24-24-sm-myalbums-1935042425/&ndash;&gt;-->
-        <!--            </div>-->
-        <!--            <div class="tile">-->
-        <!--                <img src="public/static/wishtiles/lighttower.webp" alt="tile">-->
-        <!--&lt;!&ndash;                https://www.ozon.ru/product/anapskiy-mayak-derevyannyy-konstruktor-1611899595/&ndash;&gt;-->
-        <!--            </div>-->
-        <!--        </div>-->
     </div>
-
-    <!--    todo use js for masonry
-    new Masonry('.masonry', {
-        itemSelector: '.item',
-        columnWidth: '.item',
-        percentPosition: true,
-        gutter: 16
-    })
-
-    <div class="masonry">
-        <div class="item"><img src="1.jpg"></div>
-        <div class="item"><img src="2.jpg"></div>
-        <div class="item"><img src="3.jpg"></div>
-        ...
-    </div>
-    -->
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+
+<script type="module" src="../src/cardflip.js"></script>
 <script type="module" src="../src/masonry.js"></script>
+<script type="module" src="../src/cardinflate.js"></script>
 
 </body>
 </html>
