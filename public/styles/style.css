@@ -216,8 +216,7 @@ header nav ul li a {
 }
 
 .masonry .item:hover {
-    transform: scale(1.05) !important;
-    transition: all 0.3s !important;
+    transform: scale(1.07) !important;
 }
 
 .masonry img {
