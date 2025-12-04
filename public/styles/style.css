@@ -89,6 +89,7 @@ header nav ul li .top_bubble {
 
 header nav ul li a {
     color: var(--color-accent);
+    font-weight: 700;
 }
 
 .two-columns {
@@ -98,12 +99,17 @@ header nav ul li a {
     gap: 100px;
 }
 
+.swiper-wrapper {
+    padding-bottom: 30px;
+    padding-top: 50px;
+}
+
 .swiper-pagination-bullet {
     width: 20px !important;
     height: 20px !important;
     background-color: var(--color-light) !important;
     opacity: 0.75 !important;
-    margin: 0px 20px !important;
+    margin: 0 25px !important;
     border-radius: 50% !important;
     transition: all 0.3s !important;
 }
