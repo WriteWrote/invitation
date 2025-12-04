@@ -7,7 +7,8 @@
     <link rel="icon" type="image/svg+xml" href="/logo.png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Супер-сайт</title>
-    <link rel="stylesheet" href="../public/styles/style.css">
+    <link rel="stylesheet" href="./public/styles/style.css">
+    <base href="../../../invitation/">
 </head>
 
 <body>
@@ -15,13 +16,12 @@
 <!--todo адаптивность для телефонов-->
 
 <div class="gradient_background">
-    <img class='wallpaper' src="../public/static/top_wallpaper.jpg" alt="wallpaper">
+    <img class='wallpaper' src="public/static/top_wallpaper.jpg" alt="wallpaper">
 
     <header class="container">
         <nav>
             <ul>
-<!--                todo make optional page with wishlist-->
-                <li><a href="/web/wishlist.html" class="top_bubble">Вишлист подарков</a></li>
+                <li><a href="web/wishlist.html" class="top_bubble">Вишлист подарков</a></li>
             </ul>
         </nav>
 
@@ -49,23 +49,24 @@
                 <br>
                 <p>Конец: <b>22:00</b></p>
             </div>
-            <img src="../public/static/map.jpg" alt="logotip">
+            <img src="public/static/map.jpg" alt="logotip">
         </div>
     </div>
 
     <div class="container hero">
         <h2>Что вас ожидает?</h2>
         <div class="tile-section">
+<!--            todo make optional spinner with images-->
             <div class="tile">
-                <img src="../public/static/tiles/tile_vip.jpeg" alt="tile">
+                <img src="public/static/tiles/tile_vip.jpeg" alt="tile">
                 <span class="tile">Вип-зал</span>
             </div>
             <div class="tile">
-                <img src="../public/static/tiles/tile_steak.jpg" alt="tile">
+                <img src="public/static/tiles/tile_steak.jpg" alt="tile">
                 <span class="tile">Классическая кухня</span>
             </div>
             <div class="tile">
-                <img src="../public/static/tiles/tile_cake.jpg" alt="tile">
+                <img src="public/static/tiles/tile_cake.jpg" alt="tile">
                 <span class="tile">Десерт</span>
             </div>
         </div>
@@ -97,7 +98,7 @@
 
                 <div class="survey-question">
                     <h3>Основное блюдо:</h3>
-<!--                    todo make only one radiobutton selectable-->
+                    <!--                    todo make only one radiobutton selectable-->
                     <div class="survey-answer-group">
                         <label><input type="radio"> Птица</label>
                         <label><input type="radio"> Красное мясо</label>
