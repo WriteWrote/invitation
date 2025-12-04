@@ -98,20 +98,31 @@ header nav ul li a {
     gap: 100px;
 }
 
-.tile-section {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 50px 0;
+.swiper-pagination-bullet {
+    width: 20px !important;
+    height: 20px !important;
+    background-color: var(--color-light) !important;
+    opacity: 0.75 !important;
+    margin: 0px 20px !important;
+    border-radius: 50% !important;
+    transition: all 0.3s !important;
 }
 
-.tile img {
-    height: 700px;
-    width: 500px;
+.swiper-pagination-bullet-active {
+    background-color: var(--color-accent) !important;
+    transform: scale(1.5) !important;
+}
+
+.swiper-slide img {
+    width: 100%; /* занимает свою slide-коробку */
+    min-height: 700px;
+    max-height: 700px;
     border-radius: 2.5%;
+    display: block;
+    object-fit: cover;
 }
 
-.tile {
+.slide-label {
     display: block;
     text-align: center;
     margin-top: 20px;
@@ -201,7 +212,13 @@ header nav ul li a {
     height: auto;
     overflow: hidden;
     margin-bottom: 20px;
+    transition: all 0.3s ease;
 }
+
+/*.masonry .item:hover {*/
+/*    transform: scale(1.05) !important;*/
+/*    transition: all 0.3s !important;*/
+/*}*/
 
 .masonry img {
     width: 100%;
@@ -210,6 +227,7 @@ header nav ul li a {
     border-radius: 2.5%;
     object-fit: cover;
 }
+
 .masonry .big {
     height: 800px;
     width: 600px;

@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Супер-сайт</title>
     <link rel="stylesheet" href="./public/styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <base href="../../../invitation/">
 </head>
 
@@ -55,20 +56,32 @@
 
     <div class="container hero">
         <h2>Что вас ожидает?</h2>
-        <div class="tile-section">
-<!--            todo make optional spinner with images-->
-            <div class="tile">
-                <img src="public/static/tiles/tile_vip.jpeg" alt="tile">
-                <span class="tile">Вип-зал</span>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="public/static/tiles/tile_vip.jpeg" alt="tile">
+                    <span class="slide-label">Вип-зал</span>
+                </div>
+                <div class="swiper-slide">
+                    <img src="public/static/tiles/tile_steak.jpg" alt="tile">
+                    <span class="slide-label">Классическая кухня</span>
+                </div>
+                <div class="swiper-slide">
+                    <img src="public/static/tiles/starters.webp" alt="tile">
+                    <span class="slide-label">Закуски</span>
+                </div>
+                <div class="swiper-slide">
+                    <img src="public/static/tiles/tile_wine.jpg" alt="tile">
+                    <span class="slide-label">Вина Италии</span>
+                </div>
+                <div class="swiper-slide">
+                    <img src="public/static/tiles/tile_cake.jpg" alt="tile">
+                    <span class="slide-label">Десерт</span>
+                </div>
             </div>
-            <div class="tile">
-                <img src="public/static/tiles/tile_steak.jpg" alt="tile">
-                <span class="tile">Классическая кухня</span>
-            </div>
-            <div class="tile">
-                <img src="public/static/tiles/tile_cake.jpg" alt="tile">
-                <span class="tile">Десерт</span>
-            </div>
+
+            <br>
+            <div class="swiper-pagination"></div>
         </div>
     </div>
 </div>
@@ -124,6 +137,8 @@
         </div>
     </div>
 </div>
+
+<script type="module" src="../../src/swiper.js"></script>
 
 </body>
 
