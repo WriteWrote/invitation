@@ -189,6 +189,13 @@ header nav ul li a {
     cursor: pointer;
 }
 
+input[type="checkbox"],
+input[type="radio"] {
+    accent-color: var(--color-accent);
+    width: 20px;
+    height: 20px;
+}
+
 .survey-question input {
     background: var(--color-bg-second);
     border-radius: 10px;
