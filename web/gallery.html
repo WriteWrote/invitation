@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="icon" type="image/svg+xml" href="/icons/hearts.png"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Супер-сайт</title>
+  <link rel="stylesheet" href="../public/styles/style.css">
+  <base href="../../../invitation/">
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <div class="left-bubble">
+      <span class="logo">Галерея</span>
+    </div>
+    <div class="right-bubble">
+      <nav>
+        <ul>
+          <li><a href="index.html">Назад</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="masonry">
+
+    <div class="card big">
+      <img src="../public/static/tiles/starters.webp" alt="tile" class="photo">
+    </div>
+
+    <div class="card big">
+      <img src="../public/static/tiles/tile_cake.jpg" alt="tile" class="photo">
+    </div>
+
+    <div class="card big">
+      <img src="../public/static/tiles/tile_steak_2.jpg" alt="tile" class="photo">
+    </div>
+
+    <div class="card big">
+      <img src="../public/static/tiles/tile_vip.jpeg" alt="tile" class="photo">
+    </div>
+
+    <div class="card big">
+      <img src="../public/static/tiles/tile_steak.jpg" alt="tile" class="photo">
+    </div>
+
+    <div class="card big">
+      <img src="../public/static/tiles/tile_wine.jpg" alt="tile" class="photo">
+    </div>
+
+  </div>
+</div>
+
+<!--todo нормальное модальное окно-->
+<!-- Модальное окно -->
+<div class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modal-img">
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+
+<!--todo проблемы с масонри: фиксированная высота и ширина фотографий-->
+<script type="module" src="../src/masonry.js"></script>
+<script type="module" src="../src/cardfocus.js"></script>
+<script type="module" src="../src/modal.js"></script>
+
+</body>
+</html>
