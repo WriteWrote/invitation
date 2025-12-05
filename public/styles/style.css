@@ -84,7 +84,7 @@ header .logo {
 
 /* Мобильная версия */
 @media (max-width: 768px) {
-    .wallpaper{
+    .wallpaper {
         display: none !important;
     }
 
@@ -231,6 +231,16 @@ header nav ul li a {
 }
 
 .survey-question {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height .5s ease, opacity .3s ease;
+    will-change: max-height,opacity;
+}
+
+.survey-question.visible {
+    max-height: 500px;
+    opacity: 1;
     padding-top: 30px;
     padding-bottom: 30px;
 }
@@ -377,4 +387,5 @@ input[type="radio"] {
         display: none !important;
     }
 }
+
 /*todo decompose style.css*/

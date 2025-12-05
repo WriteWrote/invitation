@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/icons/hearts.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <link rel="icon" type="image/svg+xml" href="/icons/hearts.png"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Супер-сайт</title>
   <link rel="stylesheet" href="./public/styles/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
@@ -93,9 +93,17 @@
     <div class="hero" align="center">
       <h2>Анкета гостя</h2>
       <form class="survey-form">
-        <div class="survey-question">
+        <div class="survey-question mandatory visible">
           <h3>Укажите имена вас и ваших спутников:</h3>
           <input type="text" class="survey-answer-group">
+        </div>
+
+        <div class="survey-question mandatory visible">
+          <h3>Подтвердите ваше присутствие:</h3>
+          <div class="survey-answer-group">
+            <label><input type="radio" name="confirmation" value="true"> Приду</label>
+            <label><input type="radio" name="confirmation" value=""> Не смогу</label>
+          </div>
         </div>
 
         <div class="survey-question">
@@ -126,8 +134,8 @@
           <input type="text" class="survey-answer-group">
         </div>
 
-        <div class="survey-question">
-          <a href="/send-survey" class="survey-submit-button">Отправить ответ</a></li>
+        <div class="survey-question mandatory visible">
+          <a href="/send-survey" class="survey-submit-button">Отправить ответ</a>
         </div>
       </form>
     </div>
@@ -140,6 +148,7 @@
 </div>
 
 <script type="module" src="../../src/swiper.js"></script>
+<script type="module" src="../../src/survey.js"></script>
 
 </body>
 
