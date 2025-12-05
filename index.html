@@ -95,14 +95,14 @@
       <form class="survey-form">
         <div class="survey-question mandatory visible">
           <h3>Укажите имена вас и ваших спутников:</h3>
-          <input type="text" class="survey-answer-group">
+          <input type="text" class="survey-answer-group" name="fio">
         </div>
 
         <div class="survey-question mandatory visible">
           <h3>Подтвердите ваше присутствие:</h3>
           <div class="survey-answer-group">
-            <label><input type="radio" name="confirmation" value="true"> Приду</label>
-            <label><input type="radio" name="confirmation" value=""> Не смогу</label>
+            <label><input type="radio" name="confirmation" value="Приду"> Приду</label>
+            <label><input type="radio" name="confirmation" value="Не смогу"> Не смогу</label>
           </div>
         </div>
 
@@ -110,11 +110,11 @@
           <h3>Какие напитки предпочитаете?</h3>
           <div>
             <div class="survey-answer-group">
-              <label><input type="checkbox"> Вино белое</label>
-              <label><input type="checkbox"> Шампанское</label>
-              <label><input type="checkbox"> Вино красное</label>
-              <label><input type="checkbox"> Безалкогольные напитки</label>
-              <label><input type="checkbox"> Коньяк</label>
+              <label><input type="checkbox" name="drinks" value="Вино белое"> Вино белое</label>
+              <label><input type="checkbox" name="drinks" value="Шампанское"> Шампанское</label>
+              <label><input type="checkbox" name="drinks" value="Вино красное"> Вино красное</label>
+              <label><input type="checkbox" name="drinks" value="Безалкогольные напитки"> Безалкогольные напитки</label>
+              <label><input type="checkbox" name="drinks" value="Коньяк"> Коньяк</label>
             </div>
           </div>
         </div>
@@ -122,16 +122,16 @@
         <div class="survey-question">
           <h3>Основное блюдо:</h3>
           <div class="survey-answer-group">
-            <label><input type="radio" name="main-dish"> Птица</label>
-            <label><input type="radio" name="main-dish"> Красное мясо</label>
-            <label><input type="radio" name="main-dish"> Рыба</label>
-            <label><input type="radio" name="main-dish"> Вегетарианское блюдо</label>
+            <label><input type="radio" name="dishes" value="Птица"> Птица</label>
+            <label><input type="radio" name="dishes" value="Красное мясо"> Красное мясо</label>
+            <label><input type="radio" name="dishes" value="Рыба"> Рыба</label>
+            <label><input type="radio" name="dishes" value="Вегетарианское блюдо"> Вегетарианское блюдо</label>
           </div>
         </div>
 
         <div class="survey-question">
           <h3>Укажите аллергены, если таковые есть:</h3>
-          <input type="text" class="survey-answer-group">
+          <input type="text" class="survey-answer-group" name="allergies">
         </div>
 
         <div class="survey-question mandatory visible">
