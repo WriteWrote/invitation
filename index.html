@@ -24,9 +24,8 @@
       </div>
       <div class="right-bubble">
         <nav>
-          <ul>
-            <li><a href="web/wishlist.html">Вишлист подарков</a></li>
-          </ul>
+          <ul><li><a href="web/wishlist.html">Вишлист подарков</a></li></ul>
+          <ul><li><a href="web/wishlist.html">Фото</a></li></ul>
         </nav>
       </div>
     </div>
@@ -93,9 +92,17 @@
     <div class="hero" align="center">
       <h2>Анкета гостя</h2>
       <form class="survey-form">
+
         <div class="survey-question mandatory visible">
-          <h3>Укажите имена вас и ваших спутников:</h3>
+          <h3>Укажите ваше имя:</h3>
           <input type="text" class="survey-answer-group" name="fio">
+          <br>
+          <label><input type="checkbox" name="companion" value="companion"> Со мной будет спутник</label>
+        </div>
+
+        <div class="survey-question companion-name">
+          <h3>Укажите имя спутника:</h3>
+          <input type="text" class="survey-answer-group" name="companion-name">
         </div>
 
         <div class="survey-question mandatory visible">
