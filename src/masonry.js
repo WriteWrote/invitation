@@ -19,8 +19,8 @@ let masonryLayout = undefined;
 function initMasonry() {
   masonryLayout = new Masonry('.masonry', {
     itemSelector: '.masonry-card',
-    columnWidth: 400,
-    // columnWidth: '.masonry-card',
+    // columnWidth: 400,
+    columnWidth: '.masonry .small',
     // percentPosition: true,
     gutter: 30,
   });
