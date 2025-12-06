@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <link rel="icon" type="image/svg+xml" href="/icons/hearts.png"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/icons/hearts.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Супер-сайт</title>
+<!--  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"-->
+<!--        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
   <link rel="stylesheet" href="../public/styles/style.css">
   <base href="../../../invitation/">
 </head>
@@ -12,7 +15,7 @@
 <body>
 
 <header>
-  <div class="container">
+  <div class="my-container">
     <div class="left-bubble">
       <span class="logo">Галерея</span>
     </div>
@@ -26,49 +29,87 @@
   </div>
 </header>
 
-<div class="container">
+<div class="my-container">
   <div class="masonry">
 
-    <div class="card big">
-      <img src="../public/static/tiles/starters.webp" alt="tile" class="photo">
+    <div class="masonry-card">
+      <a href="../public/static/tiles/starters.webp" data-fancybox="images" data-caption="My caption">
+        <img src="../public/static/tiles/starters.webp" alt="tile" class="photo">
+      </a>
+    </div>
+    <div class="masonry-card">
+      <a href="../public/static/tiles/tile_cake.jpg" data-fancybox="images" data-caption="My caption">
+        <img src="../public/static/tiles/tile_cake.jpg" alt="tile" class="photo">
+      </a>
     </div>
 
-    <div class="card big">
-      <img src="../public/static/tiles/tile_cake.jpg" alt="tile" class="photo">
+    <div class="masonry-card">
+      <a href="../public/static/tiles/tile_steak_2.jpg" data-fancybox="images" data-caption="My caption">
+        <img src="../public/static/tiles/tile_steak_2.jpg" alt="tile" class="photo">
+      </a>
     </div>
 
-    <div class="card big">
-      <img src="../public/static/tiles/tile_steak_2.jpg" alt="tile" class="photo">
+    <div class="masonry-card">
+      <a href="../public/static/tiles/tile_vip.jpeg" data-fancybox="images" data-caption="My caption">
+        <img src="../public/static/tiles/tile_vip.jpeg" alt="tile" class="photo">
+      </a>
     </div>
 
-    <div class="card big">
-      <img src="../public/static/tiles/tile_vip.jpeg" alt="tile" class="photo">
+    <div class="masonry-card">
+      <a href="../public/static/tiles/tile_steak.jpg" data-fancybox="images" data-caption="My caption">
+        <img src="../public/static/tiles/tile_steak.jpg" alt="tile" class="photo">
+      </a>
     </div>
 
-    <div class="card big">
-      <img src="../public/static/tiles/tile_steak.jpg" alt="tile" class="photo">
+    <div class="masonry-card">
+      <a href="../public/static/tiles/tile_wine.jpg" data-fancybox="images" data-caption="My caption">
+        <img src="../public/static/tiles/tile_wine.jpg" alt="tile" class="photo">
+      </a>
     </div>
-
-    <div class="card big">
-      <img src="../public/static/tiles/tile_wine.jpg" alt="tile" class="photo">
-    </div>
-
   </div>
+<!--    <div class="masonry">-->
+
+<!--      <div class="masonry-card big">-->
+<!--        <img src="../public/static/tiles/starters.webp" alt="tile" class="photo">-->
+<!--      </div>-->
+
+<!--      <div class="masonry-card big">-->
+<!--        <img src="../public/static/tiles/tile_cake.jpg" alt="tile" class="photo">-->
+<!--      </div>-->
+
+<!--      <div class="masonry-card big">-->
+<!--        <img src="../public/static/tiles/tile_steak_2.jpg" alt="tile" class="photo">-->
+<!--      </div>-->
+
+<!--      <div class="masonry-card big">-->
+<!--        <img src="../public/static/tiles/tile_vip.jpeg" alt="tile" class="photo">-->
+<!--      </div>-->
+
+<!--      <div class="masonry-card big">-->
+<!--        <img src="../public/static/tiles/tile_steak.jpg" alt="tile" class="photo">-->
+<!--      </div>-->
+
+<!--      <div class="masonry-card big">-->
+<!--        <img src="../public/static/tiles/tile_wine.jpg" alt="tile" class="photo">-->
+<!--      </div>-->
+
+<!--    </div>-->
 </div>
 
-<!--todo нормальное модальное окно-->
-<!-- Модальное окно -->
-<div class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="modal-img">
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
 <!--todo проблемы с масонри: фиксированная высота и ширина фотографий-->
 <script type="module" src="../src/masonry.js"></script>
 <script type="module" src="../src/cardfocus.js"></script>
-<script type="module" src="../src/modal.js"></script>
+<!--todo watch this later and understand modal: https://www.youtube.com/watch?v=Elnsd8TWCrA-->
+<!--<script type="module" src="../src/modal.js"></script>-->
+
+<!--todo later
+Добавить imagesLoaded() вместо ручной функции waitForImages.
+— Перейти на CSS Masonry (column-count) если не нужно абсолютное выравнивание.
+— Добавить lazy-loading всем изображениям (loading="lazy"), чтобы не тормозило.
+-->
 
 </body>
 </html>

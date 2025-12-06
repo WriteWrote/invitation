@@ -11,9 +11,9 @@ document.querySelectorAll('.photo').forEach(img => {
 });
 
 // закрытие по кнопке
-closeBtn.addEventListener('click', () => {
-  modal.classList.remove('active');
-});
+// closeBtn.addEventListener('click', () => {
+//   modal.classList.remove('active');
+// });
 
 // закрытие по пустому месту
 modal.addEventListener('click', (e) => {

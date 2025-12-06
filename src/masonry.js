@@ -9,7 +9,7 @@ async function waitForImages(selector) {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
-  await waitForImages('.card img');
+  await waitForImages('.masonry-card img');
 
   initMasonry();
 });
@@ -18,15 +18,15 @@ let masonryLayout = undefined;
 
 function initMasonry() {
   masonryLayout = new Masonry('.masonry', {
-    itemSelector: '.card',
-    columnWidth: 50,
-    // columnWidth: '.card',
-    percentPosition: true,
+    itemSelector: '.masonry-card',
+    columnWidth: 400,
+    // columnWidth: '.masonry-card',
+    // percentPosition: true,
     gutter: 20,
   });
 }
 
-// const allImgs = document.querySelectorAll('.masonry .card img');
+// const allImgs = document.querySelectorAll('.masonry .masonry-card img');
 // let loadedCount = 0;
 //
 // allImgs.forEach((img) => {

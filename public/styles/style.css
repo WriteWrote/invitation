@@ -51,7 +51,7 @@ img {
     background-size: cover;
 }
 
-.container {
+.my-container {
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
@@ -63,7 +63,7 @@ header {
     padding: 1% 0% 2.5%;
 }
 
-header .container {
+header .my-container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -94,7 +94,7 @@ header .logo {
         background-size: cover;
     }
 
-    header .container {
+    header .my-container {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -242,7 +242,7 @@ header nav ul li a {
     opacity: 0;
     overflow: hidden;
     transition: max-height .5s ease, opacity .3s ease;
-    will-change: max-height,opacity;
+    will-change: max-height, opacity;
 }
 
 .survey-question.visible {
@@ -305,13 +305,10 @@ input[type="radio"] {
     margin: 0 auto;
 }
 
-.masonry .card {
-    position: relative;
-    display: block;
-    width: 400px;
+.masonry-card {
+    /*width: calc(25% - 20px); !* четыре столбца *!*/
     margin-bottom: 20px;
-    transition: all 0.3s ease;
-    perspective: 1000px;
+    width: 400px;
 }
 
 .masonry .card:hover {
@@ -320,10 +317,8 @@ input[type="radio"] {
 
 .masonry img {
     width: 100%;
-    height: auto;
     display: block;
     border-radius: 2.5%;
-    object-fit: cover;
 }
 
 .masonry .big {
@@ -395,45 +390,10 @@ input[type="radio"] {
     }
 }
 
-/*Modal overlay */
-modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    left: 50%;
-    top: 100px;
-    width: 100%;
-    height: 100%;
-    background-color: var(--color-bg);
-    opacity: 0;
-    pointer-events: none; /* чтобы клики проходили к странице, пока скрыто */
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    transform: translateY(-125%);
-}
-
-.modal.active {
-    opacity: 1;
-    pointer-events: auto; /* теперь можно кликать по закрытию */
-    transform: translateY(-125%);
-}
-
-.modal-content {
-    margin: 5% auto;
-    display: block;
-    max-width: 50%;
-    max-height: 50%;
-    border-radius: 2.5%;
-}
-
-.close {
-    display: none;
-    position: absolute;
-    top: 20px;
-    right: 35px;
-    color: var(--color-accent);
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
+@media (max-width: 768px) {
+    .gall-block {
+        margin-top: 20px;
+    }
 }
 
 /*todo decompose style.css*/
