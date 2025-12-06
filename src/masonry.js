@@ -22,7 +22,7 @@ function initMasonry() {
     columnWidth: 400,
     // columnWidth: '.masonry-card',
     // percentPosition: true,
-    gutter: 20,
+    gutter: 30,
   });
 }
 

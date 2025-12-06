@@ -1,4 +1,4 @@
-const items = document.querySelectorAll('.masonry .card');
+const items = document.querySelectorAll('.masonry-card');
 
 items.forEach(item => {
   item.addEventListener('mouseenter', () => {

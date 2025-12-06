@@ -306,12 +306,13 @@ input[type="radio"] {
 }
 
 .masonry-card {
-    /*width: calc(25% - 20px); !* четыре столбца *!*/
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     width: 400px;
+    transition: all 0.3s ease;
+    perspective: 1000px;
 }
 
-.masonry .card:hover {
+.masonry-card:hover {
     transform: scale(1.07) !important;
 }
 
