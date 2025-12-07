@@ -1,6 +1,6 @@
 import { masonryLayout } from './masonry.js';
 
-document.querySelectorAll('.card').forEach((card) => {
+document.querySelectorAll('.masonry-card').forEach((card) => {
   const img = card.querySelector('.card-front img');
   const cardInner = card.querySelector('.card-inner');
 
@@ -12,10 +12,6 @@ document.querySelectorAll('.card').forEach((card) => {
   // генерируем QR
   const text = card.dataset.qr; // текст для QR берём из data-атрибута
   const canvas = card.querySelector('.qr-code');
-
-  // вычисляем ширину карточки
-  // const cardWidth = card.clientWidth;
-  // const qrSize = Math.floor(cardWidth * 0.8);
 
   if (text && canvas) {
     const qrSize = card.clientWidth;

@@ -51,7 +51,7 @@ img {
     background-size: cover;
 }
 
-.my-container {
+.container {
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
@@ -63,7 +63,7 @@ header {
     padding: 1% 0% 2.5%;
 }
 
-header .my-container {
+header .container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -94,7 +94,7 @@ header .logo {
         background-size: cover;
     }
 
-    header .my-container {
+    header .container {
         display: flex;
         flex-direction: column;
         align-items: center;
