@@ -1,0 +1,16 @@
+.gradient_background {
+    background: var(--color-bg);
+    background: linear-gradient(
+            180deg,
+            var(--color-bg) 30%,
+            var(--color-bg-second) 43%,
+            var(--color-bg) 75%
+    );
+    width: 100%;
+}
+
+.image_background {
+    width: 100%;
+    background: url("../static/backgrounds/panorama_background_2.jpg") no-repeat center center fixed;
+    background-size: cover;
+}

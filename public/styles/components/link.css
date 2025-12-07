@@ -1,0 +1,8 @@
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    border-bottom: 5px solid var(--color-accent);
+    transition: all 250ms ease;
+}

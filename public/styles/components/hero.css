@@ -1,0 +1,44 @@
+.hero {
+    padding-top: var(--padding-big);
+    padding-bottom: var(--padding-default);
+    font-weight: 300;
+    line-height: 170%;
+}
+
+.hero h2 {
+    color: var(--color-accent);
+    font-size: var(--padding-big);
+    font-weight: 600;
+}
+
+.two-columns {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--padding-big);
+}
+
+.two-columns img {
+    width: clamp(600px, 50%, 1000px);
+    height: auto;
+}
+
+/* Мобильная версия */
+@media (max-width: var(--mobile-sceen-width)) {
+    .two-columns {
+        flex-direction: column;
+    }
+
+    .two-columns img {
+        order: 3;
+    }
+
+    .hero p {
+        font-size: 35px;
+        line-height: 1.25;
+    }
+
+    .hero h1 {
+        font-size: 65px;
+    }
+}

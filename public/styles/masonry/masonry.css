@@ -1,0 +1,49 @@
+.masonry {
+    margin: 0 auto;
+}
+
+.masonry-card {
+    margin-bottom: var(--padding-medium);
+    width: 400px;
+    transition: all 0.3s ease;
+    perspective: 1000px;
+}
+
+.masonry-card:hover {
+    transform: scale(1.07) !important;
+}
+
+.masonry img {
+    width: 100%;
+    display: block;
+    border-radius: var(--border-radius);
+}
+
+.masonry .big {
+    height: 800px;
+    width: 600px;
+}
+
+.masonry .small {
+    height: 400px;
+    width: 200px;
+}
+
+/* Мобильная версия */
+@media (max-width: var(--mobile-sceen-width)) {
+    .masonry .card,
+    .masonry img,
+    .masonry .big,
+    .masonry .small {
+        width: 400px;
+        height: 500px;
+    }
+
+    .masonry .card:has(.empty_tile) {
+        display: none !important;
+    }
+
+    .gall-block {
+        margin-top: var(--padding-default);
+    }
+}

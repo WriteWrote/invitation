@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    color: var(--color-light);
+    font-size: calc(15px + 1vmin);
+    background-color: var(--color-bg);
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: var(--padding-extra-big);
+    padding-top: var(--padding-big);
+}

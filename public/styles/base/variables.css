@@ -1,0 +1,10 @@
+:root {
+    --padding-default: 20px;
+    --padding-small: 10px;
+    --padding-medium: 30px;
+    --padding-big: 50px;
+    --padding-extra-big: 100px;
+
+    --mobile-sceen-width: 768px;
+    --border-radius: 2.5%;
+}
