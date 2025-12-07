@@ -90,7 +90,7 @@ header .logo {
 
     header {
         width: 100%;
-        background: url("../static/backgrounds/top_wallpaper_background.jpg") no-repeat center center fixed;
+        background: url("../static/backgrounds/top_wallpaper_background.jpg") no-repeat center center;
         background-size: cover;
     }
 
@@ -101,13 +101,14 @@ header .logo {
     }
 
     header .logo {
-        font-size: 75px;
+        font-size: 65px;
         max-width: 50%;
     }
 
     header h2,
     header p {
-        font-size: 40px;
+        font-size: 35px;
+        text-align: center;
     }
 
     .left-bubble {
@@ -160,7 +161,7 @@ header nav ul li a {
 
     .hero p,
     .survey-question h3 {
-        font-size: 40px;
+        font-size: 35px;
         line-height: 1.25;
     }
 
@@ -170,7 +171,7 @@ header nav ul li a {
     }
 
     .hero h1 {
-        font-size: 75px;
+        font-size: 65px;
     }
 }
 
