@@ -64,8 +64,6 @@ const formFields = {
 };
 
 function sendSurveyAnswerToGoogleForm() {
-  //todo фронтент не может проверить, отправилась ли успешно форма, только бекенд
-
   // Если есть выбранный radio — возьми его value.
   // Если нет — используй пустую строку, чтобы Google Form не упала
 
