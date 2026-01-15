@@ -57,7 +57,7 @@ header nav ul li a {
 
     header {
         width: 100%;
-        background: url("../../static/backgrounds/top_wallpaper_background.jpg") no-repeat center center;
+        background: url("/public/static/backgrounds/top_wallpaper_background.jpg") no-repeat center center;
         background-size: cover;
     }
 

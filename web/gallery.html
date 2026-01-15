@@ -2,12 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/icons/hearts.png" />
+  <link rel="icon" type="image/svg+xml" href="/public/static/icons/hearts.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Супер-сайт</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-  <link rel="stylesheet" href="../public/styles/style.css">
-  <base href="../../../invitation/">
+  <link rel="stylesheet" href="/public/styles/style.css">
 </head>
 
 <body>
@@ -20,7 +19,7 @@
     <div class="right-bubble">
       <nav>
         <ul>
-          <li><a href="index.html">Назад</a></li>
+          <li><a href="/index.html">Назад</a></li>
         </ul>
       </nav>
     </div>
@@ -31,49 +30,49 @@
   <div class="masonry">
 
     <div class="masonry-card">
-      <a href="../public/static/tiles/starters.webp" data-fancybox="images">
-        <img src="../public/static/tiles/starters.webp" alt="tile" class="photo">
+      <a href="/public/static/tiles/starters.webp" data-fancybox="images">
+        <img src="/public/static/tiles/starters.webp" alt="tile" class="photo">
       </a>
     </div>
     <div class="masonry-card big">
-      <a href="../public/static/tiles/tile_cake.jpg" data-fancybox="images">
-        <img src="../public/static/tiles/tile_cake.jpg" alt="tile" class="photo">
+      <a href="/public/static/tiles/tile_cake.jpg" data-fancybox="images">
+        <img src="/public/static/tiles/tile_cake.jpg" alt="tile" class="photo">
       </a>
     </div>
 
     <div class="masonry-card">
-      <a href="../public/static/tiles/tile_wine.jpg" data-fancybox="images">
-        <img src="../public/static/tiles/tile_wine.jpg" alt="tile" class="photo">
+      <a href="/public/static/tiles/tile_wine.jpg" data-fancybox="images">
+        <img src="/public/static/tiles/tile_wine.jpg" alt="tile" class="photo">
       </a>
     </div>
 
     <div class="masonry-card">
-      <a href="../public/static/tiles/tile_steak.jpg" data-fancybox="images">
-        <img src="../public/static/tiles/tile_steak.jpg" alt="tile" class="photo">
+      <a href="/public/static/tiles/tile_steak.jpg" data-fancybox="images">
+        <img src="/public/static/tiles/tile_steak.jpg" alt="tile" class="photo">
       </a>
     </div>
 
     <div class="masonry-card small">
-      <a href="../public/static/tiles/tile_steak_2.jpg" data-fancybox="images">
-        <img src="../public/static/tiles/tile_steak_2.jpg" alt="tile" class="photo">
+      <a href="/public/static/tiles/tile_steak_2.jpg" data-fancybox="images">
+        <img src="/public/static/tiles/tile_steak_2.jpg" alt="tile" class="photo">
       </a>
     </div>
 
     <div class="masonry-card small">
-      <a href="../public/static/tiles/tile_vip.jpeg" data-fancybox="images">
-        <img src="../public/static/tiles/tile_vip.jpeg" alt="tile" class="photo">
+      <a href="/public/static/tiles/tile_vip.jpeg" data-fancybox="images">
+        <img src="/public/static/tiles/tile_vip.jpeg" alt="tile" class="photo">
       </a>
     </div>
 
     <div class="masonry-card">
-      <a href="../public/static/tiles/tile_wine.jpg" data-fancybox="images">
-        <img src="../public/static/tiles/tile_wine.jpg" alt="tile" class="photo">
+      <a href="/public/static/tiles/tile_wine.jpg" data-fancybox="images">
+        <img src="/public/static/tiles/tile_wine.jpg" alt="tile" class="photo">
       </a>
     </div>
 
     <div class="masonry-card">
-      <a href="../public/static/gallery/video/test_video.mkv" data-fancybox="images" data-type="video">
-        <img src="../public/static/gallery/preview/test_preview.jpg" alt="tile" class="video">
+      <a href="/public/static/gallery/video/test_video.mkv" data-fancybox="images" data-type="video">
+        <img src="/public/static/gallery/preview/test_preview.jpg" alt="tile" class="video">
       </a>
     </div>
 
@@ -83,17 +82,8 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
-<script type="module" src="../src/masonry.js"></script>
-<script type="module" src="../src/cardfocus.js"></script>
-
-<!--todo watch this later and understand modal: https://www.youtube.com/watch?v=Elnsd8TWCrA-->
-<!--<script type="module" src="../src/modal.js"></script>-->
-
-<!--todo later
-Добавить imagesLoaded() вместо ручной функции waitForImages.
-— Перейти на CSS Masonry (column-count) если не нужно абсолютное выравнивание.
-— Добавить lazy-loading всем изображениям (loading="lazy"), чтобы не тормозило.
--->
+<script type="module" src="/src/masonry.js"></script>
+<script type="module" src="/src/cardfocus.js"></script>
 
 </body>
 </html>
