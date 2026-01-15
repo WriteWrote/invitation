@@ -30,7 +30,7 @@
 }
 
 /* Мобильная версия */
-@media (max-width: var(--mobile-screen-width)) {
+@media (max-width: 768px) {
     .masonry .card,
     .masonry img,
     .masonry .big,
