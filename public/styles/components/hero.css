@@ -24,7 +24,7 @@
 }
 
 /* Мобильная версия */
-@media (max-width: var(--mobile-sceen-width)) {
+@media (max-width: 768px) {
     .two-columns {
         flex-direction: column;
     }

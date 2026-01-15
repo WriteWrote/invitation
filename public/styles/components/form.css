@@ -68,7 +68,7 @@ input[type="radio"] {
 }
 
 /* Мобильная версия */
-@media (max-width: var(--mobile-sceen-width)) {
+@media (max-width: 768px) {
     .survey-question h3 {
         font-size: 35px;
         line-height: 1.25;

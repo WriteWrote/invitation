@@ -50,7 +50,7 @@ header nav ul li a {
 }
 
 /* Мобильная версия */
-@media (max-width: var(--mobile-sceen-width)) {
+@media (max-width: 768px) {
     .wallpaper {
         display: none !important;
     }

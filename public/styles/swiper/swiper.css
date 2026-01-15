@@ -35,7 +35,7 @@
 }
 
 /* Мобильная версия */
-@media (max-width: var(--mobile-sceen-width)) {
+@media (max-width: 768px) {
     .slide-label {
         font-size: var(--padding-medium);
     }
