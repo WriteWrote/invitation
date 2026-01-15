@@ -11,6 +11,6 @@
 
 .image_background {
     width: 100%;
-    background: url("/public/static/backgrounds/panorama_background_2.jpg") no-repeat center center fixed;
+    background: url("../static/backgrounds/panorama_background_2.jpg") no-repeat center center fixed;
     background-size: cover;
 }
