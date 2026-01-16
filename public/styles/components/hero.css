@@ -38,17 +38,17 @@
     }
 
     .hero p {
-        font-size: 35px;
+        font-size: var(--padding-default);
         line-height: 1.25;
     }
 
     .hero h1 {
-        font-size: 65px;
+        font-size: var(--padding-medium);
     }
 
     .hero h2 {
         color: var(--color-accent);
-        font-size: var(--padding-medium);
+        font-size: var(--padding-large-mobile);
         font-weight: 600;
     }
 }
