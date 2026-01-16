@@ -76,7 +76,7 @@ input[type="radio"] {
 
     .survey-answer-group {
         font-size: var(--padding-default);
-        width: 90%;
+        width: 100%;
     }
 
     .survey-answer-group label {

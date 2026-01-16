@@ -35,8 +35,8 @@
     .masonry img,
     .masonry .big,
     .masonry .small {
-        width: 300px;
-        height: 400px;
+        width: 250px;
+        height: 350px;
     }
 
     .masonry .card:has(.empty_tile) {
@@ -45,5 +45,9 @@
 
     .gall-block {
         margin-top: var(--padding-default);
+    }
+
+    .masonry-card:hover {
+        transform: none !important;
     }
 }

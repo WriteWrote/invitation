@@ -74,7 +74,7 @@ header nav ul li a {
 
     header h2,
     header p {
-        font-size: 35px;
+        font-size: var(--padding-medium);
         text-align: center;
     }
 
@@ -84,7 +84,6 @@ header nav ul li a {
 
     .right-bubble {
         order: 2;
-        font-size: var(--padding-large-mobile);
         font-size: var(--padding-large-mobile);
     }
 }

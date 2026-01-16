@@ -48,7 +48,7 @@
 
     .hero h2 {
         color: var(--color-accent);
-        font-size: var(--padding-large-mobile);
+        font-size: var(--padding-medium);
         font-weight: 600;
     }
 }
