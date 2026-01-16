@@ -1,6 +1,7 @@
 :root {
-    --padding-default: 20px;
     --padding-small: 10px;
+    --padding-default: 20px;
+    --padding-large-mobile: 20px;
     --padding-medium: 30px;
     --padding-big: 50px;
     --padding-extra-big: 100px;

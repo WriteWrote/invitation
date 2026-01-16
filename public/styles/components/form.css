@@ -70,12 +70,13 @@ input[type="radio"] {
 /* Мобильная версия */
 @media (max-width: 768px) {
     .survey-question h3 {
-        font-size: var(--padding-default);
+        font-size: var(--padding-large-mobile);
         line-height: 1.25;
     }
 
     .survey-answer-group {
-        font-size: var(--padding-small);
+        font-size: var(--padding-default);
+        width: 80%;
     }
 
     .survey-answer-group label {

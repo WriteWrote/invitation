@@ -56,7 +56,7 @@ header nav ul li a {
     }
 
     header {
-        width: 100%;
+        width: 120%;
         background: url("https://writewrote.github.io/invitation/public/static/backgrounds/top_wallpaper_background.jpg") no-repeat center center;
         background-size: cover;
     }
@@ -84,6 +84,6 @@ header nav ul li a {
 
     .right-bubble {
         order: 2;
-        font-size: var(--padding-medium);
+        font-size: var(--padding-large-mobile);
     }
 }
