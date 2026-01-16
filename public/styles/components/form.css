@@ -74,8 +74,14 @@ input[type="radio"] {
         line-height: 1.25;
     }
 
-    .survey-question input {
-        font-size: 90%;
+    input[type="checkbox"],
+    input[type="radio"] {
+        width: var(--padding-small-mobile);
+        height: var(--padding-small-mobile);
+    }
+
+    input[type="text"]{
+        width: 80%;
     }
 
     .survey-answer-group {
