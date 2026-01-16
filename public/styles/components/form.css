@@ -70,11 +70,19 @@ input[type="radio"] {
 /* Мобильная версия */
 @media (max-width: 768px) {
     .survey-question h3 {
-        font-size: 35px;
+        font-size: var(--padding-default);
         line-height: 1.25;
     }
 
     .survey-answer-group {
+        font-size: var(--padding-small);
+    }
+
+    .survey-answer-group label {
+        gap: 10px;
+    }
+
+    .survey-submit-button {
         font-size: var(--padding-medium);
     }
 }
