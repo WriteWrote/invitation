@@ -74,9 +74,13 @@ input[type="radio"] {
         line-height: 1.25;
     }
 
+    .survey-question input {
+        font-size: 90%;
+    }
+
     .survey-answer-group {
         font-size: var(--padding-default);
-        width: 95%;
+        width: 100%;
     }
 
     .survey-answer-group label {
