@@ -37,6 +37,25 @@
 /* Мобильная версия */
 @media (max-width: 768px) {
     .slide-label {
-        font-size: var(--padding-medium);
+        font-size: var(--padding-default);
+    }
+
+    .swiper-pagination-bullet {
+        width: var(--padding-small) !important;
+        height: var(--padding-small) !important;
+        background-color: var(--color-light) !important;
+        opacity: 0.75 !important;
+        margin: 0 25px !important;
+        border-radius: 50% !important;
+        transition: all 0.3s !important;
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        min-height: 400px;
+        max-height: 400px;
+        border-radius: var(--border-radius);
+        display: block;
+        object-fit: cover;
     }
 }
