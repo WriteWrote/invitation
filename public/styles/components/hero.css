@@ -34,7 +34,8 @@
         flex-direction: column;
     }
 
-    .two-columns img {
+    .two-columns img,
+    .two-columns iframe{
         order: 3;
     }
 
