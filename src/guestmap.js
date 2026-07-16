@@ -9,5 +9,5 @@ async function loadData() {
   // document.getElementById('output').textContent = rows.join('\n');
 }
 
-setInterval(loadData, 5000);
+setInterval(loadData, 30000);
 loadData().then(r => console.log("Error while waiting for table response" + r));
