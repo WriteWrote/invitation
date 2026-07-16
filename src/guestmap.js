@@ -6,7 +6,8 @@ async function loadData() {
 
   const rows = csv.split('\n').filter(row => row.trim());
   console.log(rows);
-  // document.getElementById('output').textContent = rows.join('\n');
+
+
 }
 
 setInterval(loadData, 30000);
