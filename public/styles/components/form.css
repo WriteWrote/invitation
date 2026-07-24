@@ -34,10 +34,7 @@
     color: var(--color-light);
 }
 
-.survey-question label {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--padding-small) var(--padding-default);
+.companion-name label {
     width: 50%;
 }
 
