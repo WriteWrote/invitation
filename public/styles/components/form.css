@@ -34,6 +34,10 @@
     color: var(--color-light);
 }
 
+.companion-name label {
+    width: 50%;
+}
+
 .survey-answer-group {
     display: grid;
     grid-template-columns: 1fr 1fr;
