@@ -1,9 +1,9 @@
 a {
     text-decoration: none;
-    border-style: 5px solid var(--color-accent);
+    border: 5px solid var(--color-accent);
 }
 
 a:hover {
     /*border-bottom: 5px solid var(--color-accent);*/
-    transition: all 250ms ease;
+    /*transition: all 250ms ease;*/
 }
