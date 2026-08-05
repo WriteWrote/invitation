@@ -6,7 +6,7 @@
 }
 
 .hero h2 {
-    padding-top: var(--padding-large-mobile);
+    padding-top: var(--padding-small-mobile);
     color: var(--color-accent);
     font-size: var(--padding-big);
     font-weight: 600;
