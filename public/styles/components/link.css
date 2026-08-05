@@ -1,6 +1,6 @@
 a {
     text-decoration: none;
-    border: 5px solid var(--color-accent);
+    border-bottom: 5px solid var(--color-accent);
 }
 
 a:hover {
