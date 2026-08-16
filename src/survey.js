@@ -94,6 +94,7 @@ function sendSurveyAnswerToGoogleForm() {
 
 function saveUtmToSession() {
     const urlParams = new URLSearchParams(window.location.search);
+    console.log(urlParams);
     let utmData = {};
 
     for (let [key, value] of urlParams) {
@@ -101,7 +102,7 @@ function saveUtmToSession() {
             utmData[key] = value;
         }
     }
-
+    console.log(utm_data);
     // Если метки найдены, сохраняем их в сессию
     if (Object.keys(utmData).length > 0) {
         sessionStorage.setItem('utm_data', JSON.stringify(utmData));
