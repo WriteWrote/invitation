@@ -96,7 +96,7 @@ function saveUtmToSession() {
   const urlParams = window.location.search;
 
   for (let param of urlParams.split('&')) {
-    let key, value = param.split('?');
+    [key, value] = param.split('=');
     console.log(key + ' - ' + value);
     if (key.startsWith('?utm_')) {
       sessionStorage.setItem(key.replace('?', ''), value);
