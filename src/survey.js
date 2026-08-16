@@ -94,7 +94,7 @@ function sendSurveyAnswerToGoogleForm() {
 
 function saveUtmToSession() {
   const urlParams = window.location.search;
-  val key, value;
+  let key, value;
   for (let param of urlParams.split('&')) {
     [key, value] = param.split('=');
     console.log(key + ' - ' + value);
