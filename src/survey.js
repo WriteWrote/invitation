@@ -95,7 +95,7 @@ function sendSurveyAnswerToGoogleForm() {
 function saveUtmToSession() {
     const urlParams = new URLSearchParams(window.location.search);
     console.log(window.location.search);
-    console.log(str(urlParams));
+    console.log(JSON.stringify(urlParams));
     let utmData = {};
 
     for (let [key, value] of urlParams) {
