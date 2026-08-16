@@ -108,9 +108,9 @@ function saveUtmToSession() {
 saveUtmToSession();
 
 // получаем сохраненную метку utm и скрываем галочку спутника, если она есть
-const hideCompanionInput = JSON.parse(sessionStorage.getItem('utm_source'));
+const hideCompanionInput = sessionStorage.getItem('utm_source');
 console.log(hideCompanionInput);
-if (hideCompanionInput) {
+if (hideCompanionInput='dv') {
   document.querySelector('input[name="companion"]').classList.remove('visible');
 }
 
