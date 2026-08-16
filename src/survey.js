@@ -93,8 +93,7 @@ function sendSurveyAnswerToGoogleForm() {
 }
 
 function saveUtmToSession() {
-    //"?utm_source=dv"
-  const urlParams = new URLSearchParams(window.location.search);
+  const urlParams = window.location.search;
 
   for (let param of urlParams.split('&')) {
     let key, value = param.split('?');
