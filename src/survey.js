@@ -92,6 +92,25 @@ function sendSurveyAnswerToGoogleForm() {
   showMessageSurveySent();
 }
 
-// обработчик события кнопки вызывает отправку результата
+function saveUtmToSession() {
+  const urlParams = window.location.search;
+  let key, value;
+  for (let param of urlParams.split('&')) {
+    [key, value] = param.split('=');
+    if (key.startsWith('?utm_')) {
+      sessionStorage.setItem(key.replace('?', ''), value);
+    }
+  }
+}
 
+// Вызываем при загрузке страницы
+saveUtmToSession();
+
+// получаем сохраненную метку utm и скрываем галочку спутника, если она есть
+const hideCompanionInput = sessionStorage.getItem('utm_source');
+if (hideCompanionInput=='dv') {
+  document.querySelector('input[name="companion"]').parentElement.remove();
+}
+
+// обработчик события кнопки вызывает отправку результата
 document.querySelector('a[class="survey-submit-button"]').addEventListener('click', sendSurveyAnswerToGoogleForm);
