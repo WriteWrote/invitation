@@ -109,7 +109,7 @@ saveUtmToSession();
 // получаем сохраненную метку utm и скрываем галочку спутника, если она есть
 const hideCompanionInput = sessionStorage.getItem('utm_source');
 if (hideCompanionInput=='dv') {
-  document.querySelector('input[name="companion"]/ancestor::label').classList.remove('visible');
+  document.querySelector('input[name="companion"]').parentElement.classList.remove('visible');
 }
 
 // обработчик события кнопки вызывает отправку результата
