@@ -97,7 +97,6 @@ function saveUtmToSession() {
   let key, value;
   for (let param of urlParams.split('&')) {
     [key, value] = param.split('=');
-    console.log(key + ' - ' + value);
     if (key.startsWith('?utm_')) {
       sessionStorage.setItem(key.replace('?', ''), value);
     }
@@ -109,8 +108,7 @@ saveUtmToSession();
 
 // получаем сохраненную метку utm и скрываем галочку спутника, если она есть
 const hideCompanionInput = sessionStorage.getItem('utm_source');
-console.log(hideCompanionInput);
-if (hideCompanionInput='dv') {
+if (hideCompanionInput=='dv') {
   document.querySelector('input[name="companion"]').classList.remove('visible');
 }
 
