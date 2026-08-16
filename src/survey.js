@@ -92,6 +92,18 @@ function sendSurveyAnswerToGoogleForm() {
   showMessageSurveySent();
 }
 
-// обработчик события кнопки вызывает отправку результата
+// Позже в любом месте кода можно получить сохраненные метки:
+//function getSavedUtm() {
+//    const data = sessionStorage.getItem('utm_data');
+//    return data ? JSON.parse(data) : null;
+//}
 
+// получаем сохраненную метку utm и скрываем галочку спутника, если она есть
+const hideCompanionInput = sessionStorage.getItem('utm_source');
+console.log(hideCompanionInput);
+if (hideCompanionInput) {
+  document.querySelector('input[name="companion"]').classList.remove('visible');
+}
+
+// обработчик события кнопки вызывает отправку результата
 document.querySelector('a[class="survey-submit-button"]').addEventListener('click', sendSurveyAnswerToGoogleForm);
