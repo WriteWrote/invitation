@@ -92,14 +92,28 @@ function sendSurveyAnswerToGoogleForm() {
   showMessageSurveySent();
 }
 
-// Позже в любом месте кода можно получить сохраненные метки:
-//function getSavedUtm() {
-//    const data = sessionStorage.getItem('utm_data');
-//    return data ? JSON.parse(data) : null;
-//}
+function saveUtmToSession() {
+    const urlParams = new URLSearchParams(window.location.search);
+    let utmData = {};
+
+    for (let [key, value] of urlParams) {
+        if (key.startsWith('utm_')) {
+            utmData[key] = value;
+        }
+    }
+
+    // Если метки найдены, сохраняем их в сессию
+    if (Object.keys(utmData).length > 0) {
+        sessionStorage.setItem('utm_data', JSON.stringify(utmData));
+        console.log('UTM-метки сохранены в сессии');
+    }
+}
+
+// Вызываем при загрузке страницы
+saveUtmToSession();
 
 // получаем сохраненную метку utm и скрываем галочку спутника, если она есть
-const hideCompanionInput = sessionStorage.getItem('utm_source');
+const hideCompanionInput = JSON.parse(sessionStorage.getItem('utm_source'));
 console.log(hideCompanionInput);
 if (hideCompanionInput) {
   document.querySelector('input[name="companion"]').classList.remove('visible');
