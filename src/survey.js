@@ -92,13 +92,40 @@ function sendSurveyAnswerToGoogleForm() {
   showMessageSurveySent();
 }
 
+
+// Функция для установки куки
+function setCookie(name, value, days = 30) {
+    const date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    const expires = `expires=${date.toUTCString()}`;
+    document.cookie = `${name}=${encodeURIComponent(value)}; ${expires}; path=/; SameSite=Lax`;
+}
+
+// Функция для получения куки
+function getCookie(name) {
+    const cookies = document.cookie.split('; ');
+    for (let cookie of cookies) {
+        const [key, value] = cookie.split('=');
+        if (key === name) {
+            return decodeURIComponent(value);
+        }
+    }
+    return null;
+}
+
+// Функция для удаления куки
+function deleteCookie(name) {
+    document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+}
+
 function saveUtmToSession() {
   const urlParams = window.location.search;
   let key, value;
   for (let param of urlParams.split('&')) {
     [key, value] = param.split('=');
     if (key.startsWith('?utm_')) {
-      sessionStorage.setItem(key.replace('?', ''), value);
+//      sessionStorage.setItem(key.replace('?', ''), value);
+        setCookie(key.replace('?', ''), value, 30);
     }
   }
 }
@@ -107,7 +134,8 @@ function saveUtmToSession() {
 saveUtmToSession();
 
 // получаем сохраненную метку utm и скрываем галочку спутника, если она есть
-const hideCompanionInput = sessionStorage.getItem('utm_source');
+//const hideCompanionInput = sessionStorage.getItem('utm_source');
+const hideCompanionInput = getCookie('utm_source');
 if (hideCompanionInput=='dv') {
   document.querySelector('input[name="companion"]').parentElement.remove();
 }
