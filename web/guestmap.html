@@ -1,301 +1,590 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <base href="/">
-  <link rel="icon" type="image/svg+xml" href="public/static/icons/hearts.png"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Схема зала</title>
-  <link rel="stylesheet" href="public/styles/style.css">
+    <meta charset="UTF-8"/>
+    <base href="/">
+    <link rel="icon" type="image/svg+xml" href="public/static/icons/hearts.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Схема зала</title>
+    <link rel="stylesheet" href="public/styles/style.css">
 </head>
 
 <body>
 
 <header>
-  <div class="container">
-    <div class="left-bubble">
-      <span class="logo">Схема зала</span>
+    <div class="container">
+        <div class="left-bubble">
+            <span class="logo">Схема зала</span>
+        </div>
+        <div class="right-bubble">
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Назад</a></li>
+                </ul>
+            </nav>
+        </div>
     </div>
-    <div class="right-bubble">
-      <nav>
-        <ul>
-          <li><a href="/index.html">Назад</a></li>
-        </ul>
-      </nav>
-    </div>
-  </div>
 </header>
 
 <div class="container hero">
-  <h2>Как найти свое место?</h2>
-  <br>
-  <p>Для вашего удобства на столе будут стоять именные карточки. Также предлагаем ориентироваться на схему рассадки, которая появится за десять дней до мероприятия:</p>
+    <h2>Как найти свое место?</h2>
+    <br>
+    <p>Для вашего удобства на столе будут стоять именные карточки. Также предлагаем ориентироваться на схему рассадки,
+        которая появится за десять дней до мероприятия:</p>
 
-  <br>
-  <br>
-  <br>
+    <br>
+    <br>
+    <br>
 
-  <!--  <img src="public/static/map_moscow.jpg" alt="Схема рассадки гостей">-->
-  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 877.514000546342 626.3999938964844" class="guestmap">
-    <metadata></metadata>
-    <defs>
-      <style class="style-fonts">
-          @font-face {
-              font-family: Nunito;
-              src: url(data:font/woff2;base64,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);
-          }
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1042.9706120118417 738.1675983452635"
+         width="1042.9706120118417" height="738.1675983452635" class="excalidraw-svg"><!-- svg-source:excalidraw -->
+        <metadata></metadata>
+        <defs>
+            <style class="style-fonts">
+                @font-face { font-family: Nunito; src: url(data:font/woff2;base64,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); }
+                @font-face { font-family: Nunito; src: url(data:font/woff2;base64,d09GMgABAAAAAAK4AA4AAAAABbQAAAJhAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGx4cLgZgP1NUQVREAEQRCAqBLIEsCwoAATYCJAMQBCAFhCQHIBu1BBEVnFvIvkrgDpN/oQ8mogzLk8OszqTOKTX/4ePhn3XP/z4z80Qm2pVuRCZWB/Sb07/5z3NQn6VLdhbTkm7WBGA+PZQ/Fa2BM2QrAAZv6i5PpGuBRpxI4Q4NNOBAP1iCUQIT6PCzQA/YxAKxrJ19SAa5TR8/XZ8+o2W2okBBlVUW3Xr0Gya/DHJAoKDGGkvJ8/JT/0vmKT2PLFugNDjNWdI2/pKHZEsyCn3nkJigctQEFjSfHP+P26prn/75P7I20bi6OAjxJbmD6lIh5JegtAS1JStnzloWmL1s8rwIobRMKiRRAwQCIk/8BRKkKC0VKC3THPnll6C6Btrn6CfLfcy9zD0UAELkKAYykB8p2qAbIAMQkgpFiw7fd+LUkUrPYTs2P3s24sjR0yfLPH1q05MnY7eci83nCxXZetamMwUnmSmXnF73lqtL6VLYVHxz10psrrmpfBd97cip9U7vvljUp9yeZtsNnVSiRPHiQ11p+vLDwovvWU7T1kAgPVLlv/1//DexWLu/86fpD3hd7lN413KbXM4aZ8WRVwKCZ/BBBNQjwHoWf2kZeYgeGiajtBDIjJPHHBmvYo2FbJGKrACO+W+5obnHbqKoq26qmxX1jLt5VDTOyauppoWgsJoCg5aFeWhBXkOvAjAEY5IcBfdtvDUk8tlb+K5nTjbxDS5/RpEDa9YCwi+h9F1MoFPvN9sanZzOp2WZwfDGXeERb6qzbqhxGJ9j+lfsvXaz1YWHJyDw+y8KA8EMTK3xUGkoesaketxouL7xLK0zjBsuohsJBxOjG8mlvJRHUu5KZQAA); }
+            </style>
+        </defs>
+        <rect x="0" y="0" width="1042.9706120118417" height="738.1675983452635" fill="#121212"></rect>
+        <g stroke-linecap="round"
+           transform="translate(240.6469176853317 128.25566945823408) rotate(0 376.16184716325506 251.3261633974614)">
+            <path d="M0 0 C270.7 0, 541.4 0, 752.32 0 M0 0 C174.18 0, 348.37 0, 752.32 0 M752.32 0 C752.32 147.64, 752.32 295.27, 752.32 502.65 M752.32 0 C752.32 155.13, 752.32 310.26, 752.32 502.65 M752.32 502.65 C470.13 502.65, 187.94 502.65, 0 502.65 M752.32 502.65 C465.53 502.65, 178.73 502.65, 0 502.65 M0 502.65 C0 377.05, 0 251.45, 0 0 M0 502.65 C0 343.34, 0 184.03, 0 0"
+                  stroke="#d3d3d3" stroke-width="2" fill="none"></path>
+        </g>
+        <g stroke-linecap="round"
+           transform="translate(732.4889851251114 235.47547205733434) rotate(0 34.85039924521351 185.46315621415076)">
+            <path d="M0 0 C21.08 0, 42.15 0, 69.7 0 M0 0 C16.74 0, 33.49 0, 69.7 0 M69.7 0 C69.7 125.75, 69.7 251.49, 69.7 370.93 M69.7 0 C69.7 110.86, 69.7 221.73, 69.7 370.93 M69.7 370.93 C48.52 370.93, 27.34 370.93, 0 370.93 M69.7 370.93 C43.29 370.93, 16.87 370.93, 0 370.93 M0 370.93 C0 288.87, 0 206.81, 0 0 M0 370.93 C0 243.26, 0 115.6, 0 0"
+                  stroke="#d3d3d3" stroke-width="2" fill="none"></path>
+        </g>
+        <g stroke-linecap="round"
+           transform="translate(752.950042349191 159.644492314697) rotate(89.81397115618928 14.541029628341988 43.94115305376164)">
+            <path d="M0 0 C9.73 0, 19.46 0, 29.08 0 M0 0 C8.26 0, 16.52 0, 29.08 0 M29.08 0 C29.08 20.2, 29.08 40.41, 29.08 87.88 M29.08 0 C29.08 20.02, 29.08 40.05, 29.08 87.88 M29.08 87.88 C20.85 87.88, 12.61 87.88, 0 87.88 M29.08 87.88 C18.5 87.88, 7.92 87.88, 0 87.88 M0 87.88 C0 62.84, 0 37.8, 0 0 M0 87.88 C0 54.49, 0 21.09, 0 0"
+                  stroke="#d3d3d3" stroke-width="2" fill="none"></path>
+        </g>
+        <g stroke-linecap="round">
+            <g transform="translate(241.8798654256015 228.72407695564522) rotate(0.14723369339116504 0 59.95362250407868)">
+                <path d="M0 0 C0 31.8, 0 63.6, 0 119.91 M0 0 C0 46.93, 0 93.85, 0 119.91" stroke="#d3d3d3"
+                      stroke-width="2" fill="none"></path>
+            </g>
+        </g>
+        <mask></mask>
+        <g stroke-linecap="round">
+            <g transform="translate(242.66861017231977 228.80722127196387) rotate(0.14723369339116504 31.566674858657166 59.95362250407868)">
+                <path d="M0 0 C4.34 0.53, 17.22 -0.92, 26.03 3.16 C34.84 7.23, 46.67 14.99, 52.85 24.45 C59.03 33.92, 63.5 47.86, 63.11 59.95 C62.71 72.05, 57.06 87.56, 50.49 97.03 C43.91 106.5, 32.08 112.94, 23.67 116.75 C15.25 120.56, 3.94 119.38, 0 119.91 M0 0 C4.34 0.53, 17.22 -0.92, 26.03 3.16 C34.84 7.23, 46.67 14.99, 52.85 24.45 C59.03 33.92, 63.5 47.86, 63.11 59.95 C62.71 72.05, 57.06 87.56, 50.49 97.03 C43.91 106.5, 32.08 112.94, 23.67 116.75 C15.25 120.56, 3.94 119.38, 0 119.91"
+                      stroke="#d3d3d3" stroke-width="2" fill="none"></path>
+            </g>
+        </g>
+        <mask></mask>
+        <g stroke-linecap="round">
+            <g transform="translate(241.54882080394606 439.8134155835132) rotate(0.14723369339116504 0 59.95362250407868)">
+                <path d="M0 0 C0 40.3, 0 80.61, 0 119.91 M0 0 C0 30.05, 0 60.1, 0 119.91" stroke="#d3d3d3"
+                      stroke-width="2" fill="none"></path>
+            </g>
+        </g>
+        <mask></mask>
+        <g stroke-linecap="round">
+            <g transform="translate(242.3375655506643 439.89655989983186) rotate(0.14723369339116504 31.566674858657166 59.95362250407868)">
+                <path d="M0 0 C4.34 0.53, 17.22 -0.92, 26.03 3.16 C34.84 7.23, 46.67 14.99, 52.85 24.45 C59.03 33.92, 63.5 47.86, 63.11 59.95 C62.71 72.05, 57.06 87.56, 50.49 97.03 C43.91 106.5, 32.08 112.94, 23.67 116.75 C15.25 120.56, 3.94 119.38, 0 119.91 M0 0 C4.34 0.53, 17.22 -0.92, 26.03 3.16 C34.84 7.23, 46.67 14.99, 52.85 24.45 C59.03 33.92, 63.5 47.86, 63.11 59.95 C62.71 72.05, 57.06 87.56, 50.49 97.03 C43.91 106.5, 32.08 112.94, 23.67 116.75 C15.25 120.56, 3.94 119.38, 0 119.91"
+                      stroke="#d3d3d3" stroke-width="2" fill="none"></path>
+            </g>
+        </g>
+        <mask></mask>
+        <g transform="translate(224.158670113874 274.0186657199043) rotate(270.43700904857707 37.319969177246094 12.5)">
+            <text x="0" y="19.08" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="20px" fill="#d3d3d3"
+                  text-anchor="start" style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">фуршет
+            </text>
+        </g>
+        <g transform="translate(223.7598450845568 486.957164025265) rotate(270.43700904857707 37.319969177246094 12.5)">
+            <text x="0" y="19.08" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="20px" fill="#d3d3d3"
+                  text-anchor="start" style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">фуршет
+            </text>
+        </g>
+        <g stroke-linecap="round"
+           transform="translate(338.2771085898605 211.22357194626198) rotate(0 104.12318261140399 197.02218832054683)">
+            <path d="M0 0 C70.9 0, 141.81 0, 208.25 0 M208.25 0 C208.25 126.76, 208.25 253.52, 208.25 394.04 M208.25 394.04 C149.59 394.04, 90.94 394.04, 0 394.04 M0 394.04 C0 238.95, 0 83.86, 0 0"
+                  stroke="#33383d" stroke-width="2.5" fill="none" stroke-dasharray="8 10"></path>
+        </g>
+        <g transform="translate(403.2203366724559 395.7457602668088) rotate(0 39.179954528808594 12.5)">
+            <text x="39.179954528808594" y="19.08" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="20px"
+                  fill="#6e757c" text-anchor="middle" style="white-space: pre;" direction="ltr"
+                  dominant-baseline="alphabetic">танцпол
+            </text>
+        </g>
+        <g stroke-linecap="round"
+           transform="translate(396.9604449081179 128.5691931201962) rotate(0 77.55942680931417 27.73907611853201)">
+            <path d="M0 0 C42.69 0, 85.39 0, 155.12 0 M0 0 C49.43 0, 98.86 0, 155.12 0 M155.12 0 C155.12 17.28, 155.12 34.55, 155.12 55.48 M155.12 0 C155.12 11.19, 155.12 22.39, 155.12 55.48 M155.12 55.48 C124.05 55.48, 92.99 55.48, 0 55.48 M155.12 55.48 C107.31 55.48, 59.5 55.48, 0 55.48 M0 55.48 C0 36.42, 0 17.36, 0 0 M0 55.48 C0 35.73, 0 15.97, 0 0"
+                  stroke="#d3d3d3" stroke-width="2" fill="none"></path>
+        </g>
+        <g transform="translate(407.7277269420415 136.3082692387282) rotate(0 66.79214477539062 20)">
+            <text x="66.79214477539062" y="15.264000000000001" font-family="Nunito, sans-serif, Segoe UI Emoji"
+                  font-size="16px" fill="#d3d3d3" text-anchor="middle" style="white-space: pre;" direction="ltr"
+                  dominant-baseline="alphabetic">книга пожеланий
+            </text>
+            <text x="66.79214477539062" y="35.264" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="16px"
+                  fill="#d3d3d3" text-anchor="middle" style="white-space: pre;" direction="ltr"
+                  dominant-baseline="alphabetic">для молодых
+            </text>
+        </g>
+        <g transform="translate(790.5936540755549 165.96387004591605) rotate(0 17.808120727539062 7.5)">
+            <text x="0" y="11.448" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="12px" fill="#d3d3d3"
+                  text-anchor="start" style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">Элина
+            </text>
+        </g>
+        <g stroke-linecap="round"
+           transform="translate(763.822795914762 158.42204449076235) rotate(0 10.268395770545453 10.268395770545453)">
+            <path d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
+                  stroke="#d3d3d3" stroke-width="2" fill="none"></path>
+        </g>
+        <g stroke-linecap="round"
+           transform="translate(749.5116367229135 155.4927525812049) rotate(0 11.699786448077987 11.699786448077987)">
+            <path d="M23.4 11.7 C23.4 12.38, 23.34 13.06, 23.22 13.73 C23.1 14.4, 22.93 15.06, 22.69 15.7 C22.46 16.34, 22.17 16.96, 21.83 17.55 C21.49 18.14, 21.1 18.7, 20.66 19.22 C20.23 19.74, 19.74 20.23, 19.22 20.66 C18.7 21.1, 18.14 21.49, 17.55 21.83 C16.96 22.17, 16.34 22.46, 15.7 22.69 C15.06 22.93, 14.4 23.1, 13.73 23.22 C13.06 23.34, 12.38 23.4, 11.7 23.4 C11.02 23.4, 10.34 23.34, 9.67 23.22 C9 23.1, 8.33 22.93, 7.7 22.69 C7.06 22.46, 6.44 22.17, 5.85 21.83 C5.26 21.49, 4.7 21.1, 4.18 20.66 C3.66 20.23, 3.17 19.74, 2.74 19.22 C2.3 18.7, 1.91 18.14, 1.57 17.55 C1.23 16.96, 0.94 16.34, 0.71 15.7 C0.47 15.06, 0.3 14.4, 0.18 13.73 C0.06 13.06, 0 12.38, 0 11.7 C0 11.02, 0.06 10.34, 0.18 9.67 C0.3 9, 0.47 8.33, 0.71 7.7 C0.94 7.06, 1.23 6.44, 1.57 5.85 C1.91 5.26, 2.3 4.7, 2.74 4.18 C3.17 3.66, 3.66 3.17, 4.18 2.74 C4.7 2.3, 5.26 1.91, 5.85 1.57 C6.44 1.23, 7.06 0.94, 7.7 0.71 C8.33 0.47, 9 0.3, 9.67 0.18 C10.34 0.06, 11.02 0, 11.7 0 C12.38 0, 13.06 0.06, 13.73 0.18 C14.4 0.3, 15.06 0.47, 15.7 0.71 C16.34 0.94, 16.96 1.23, 17.55 1.57 C18.14 1.91, 18.7 2.3, 19.22 2.74 C19.74 3.17, 20.23 3.66, 20.66 4.18 C21.1 4.7, 21.49 5.26, 21.83 5.85 C22.17 6.44, 22.46 7.06, 22.69 7.7 C22.93 8.33, 23.1 9, 23.22 9.67 C23.34 10.34, 23.37 11.36, 23.4 11.7 C23.43 12.04, 23.43 11.36, 23.4 11.7"
+                  stroke="#d3d3d3" stroke-width="2" fill="none"></path>
+        </g>
+        <g transform="translate(709.0932662470213 166.28041977935624) rotate(0 17.868125915527344 7.5)">
+            <text x="0" y="11.448" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="12px" fill="#d3d3d3"
+                  text-anchor="start" style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">Павел
+            </text>
+        </g>
+        <g transform="translate(205.44663221745287 381.15649118701407) rotate(270 22.509979248046875 12.5)">
+            <text x="45.01995849609375" y="19.08" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="20px"
+                  fill="#d3d3d3" text-anchor="end" style="white-space: pre;" direction="ltr"
+                  dominant-baseline="alphabetic">вход
+            </text>
+        </g>
+        <g stroke-linecap="round">
+            <g transform="translate(239.50519633256846 348.82308138977083) rotate(0 -2.9270945709331784 0)">
+                <path d="M0 0 C-2.28 0, -4.56 0, -5.85 0 M0 0 C-1.37 0, -2.75 0, -5.85 0" stroke="#d3d3d3"
+                      stroke-width="2" fill="none"></path>
+            </g>
+        </g>
+        <mask></mask>
+        <g stroke-linecap="round">
+            <g transform="translate(239.5781017616353 439.98105095999347) rotate(0 -2.9270945709331784 0)">
+                <path d="M0 0 C-1.51 0, -3.03 0, -5.85 0 M0 0 C-1.55 0, -3.1 0, -5.85 0" stroke="#d3d3d3"
+                      stroke-width="2" fill="none"></path>
+            </g>
+        </g>
+        <mask></mask>
+        <g stroke-linecap="round"
+           transform="translate(700.3111358849519 460.0610031379692) rotate(0 10.268395770545453 10.268395770545453)">
+            <path d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
+                  stroke="#d3d3d3" stroke-width="2" fill="none"></path>
+        </g>
+        <g stroke-linecap="round"
+           transform="translate(700.3484911319811 490.5023995474462) rotate(0 10.268395770545453 10.268395770545453)">
+            <path d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
+                  stroke="#d3d3d3" stroke-width="2" fill="none"></path>
+        </g>
+        <g stroke-linecap="round"
+           transform="translate(700.3485363383525 519.7213669864759) rotate(0 10.268395770545453 10.268395770545453)">
+            <path d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
+                  stroke="#d3d3d3" stroke-width="2" fill="none"></path>
+        </g>
+        <g stroke-linecap="round"
+           transform="translate(700.4223560209721 549.329119940282) rotate(0 10.268395770545453 10.268395770545453)">
+            <path d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
+                  stroke="#d3d3d3" stroke-width="2" fill="none"></path>
+        </g>
+        <g stroke-linecap="round"
+           transform="translate(700.459711268001 577.770516349759) rotate(0 10.268395770545453 10.268395770545453)">
+            <path d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
+                  stroke="#d3d3d3" stroke-width="2" fill="none"></path>
+        </g>
+        <g stroke-linecap="round"
+           transform="translate(700.1664044095219 430.99629076259293) rotate(0 10.268395770545453 10.268395770545453)">
+            <path d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
+                  stroke="#d3d3d3" stroke-width="2" fill="none"></path>
+        </g>
+        <g stroke-linecap="round"
+           transform="translate(700.3140437747612 399.47504241909905) rotate(0 10.268395770545453 10.268395770545453)">
+            <path d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
+                  stroke="#d3d3d3" stroke-width="2" fill="none"></path>
+        </g>
+        <g stroke-linecap="round"
+           transform="translate(700.3513990217903 366.916438828576) rotate(0 10.268395770545453 10.268395770545453)">
+            <path d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
+                  stroke="#d3d3d3" stroke-width="2" fill="none"></path>
+        </g>
+        <g stroke-linecap="round"
+           transform="translate(700.3514442281618 334.13540626760573) rotate(0 10.268395770545453 10.268395770545453)">
+            <path d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
+                  stroke="#d3d3d3" stroke-width="2" fill="none"></path>
+        </g>
+        <g stroke-linecap="round"
+           transform="translate(700.3140889811326 304.61418052729755) rotate(0 10.268395770545453 10.268395770545453)">
+            <path d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
+                  stroke="#d3d3d3" stroke-width="2" fill="none"></path>
+        </g>
+        <g stroke-linecap="round"
+           transform="translate(700.3514442281617 274.0555769367746) rotate(0 10.268395770545453 10.268395770545453)">
+            <path d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
+                  stroke="#d3d3d3" stroke-width="2" fill="none"></path>
+        </g>
+        <g stroke-linecap="round"
+           transform="translate(700.3514894345332 244.2745443758043) rotate(0 10.268395770545453 10.268395770545453)">
+            <path d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
+                  stroke="#d3d3d3" stroke-width="2" fill="none"></path>
+        </g>
+        <g stroke-linecap="round"
+           transform="translate(811.9472691690448 461.3105888116304) rotate(0 10.268395770545453 10.268395770545453)">
+            <path d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
+                  stroke="#d3d3d3" stroke-width="2" fill="none"></path>
+        </g>
+        <g stroke-linecap="round"
+           transform="translate(811.9846244160738 490.75198522110736) rotate(0 10.268395770545453 10.268395770545453)">
+            <path d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
+                  stroke="#d3d3d3" stroke-width="2" fill="none"></path>
+        </g>
+        <g stroke-linecap="round"
+           transform="translate(811.9846696224454 519.9709526601371) rotate(0 10.268395770545453 10.268395770545453)">
+            <path d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
+                  stroke="#d3d3d3" stroke-width="2" fill="none"></path>
+        </g>
+        <g stroke-linecap="round"
+           transform="translate(812.0584893050648 549.5787056139432) rotate(0 10.268395770545453 10.268395770545453)">
+            <path d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
+                  stroke="#d3d3d3" stroke-width="2" fill="none"></path>
+        </g>
+        <g stroke-linecap="round"
+           transform="translate(812.0958445520939 579.0201020234202) rotate(0 10.268395770545453 10.268395770545453)">
+            <path d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
+                  stroke="#d3d3d3" stroke-width="2" fill="none"></path>
+        </g>
+        <g stroke-linecap="round"
+           transform="translate(811.8025376936147 431.2458764362541) rotate(0 10.268395770545453 10.268395770545453)">
+            <path d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
+                  stroke="#d3d3d3" stroke-width="2" fill="none"></path>
+        </g>
+        <g stroke-linecap="round"
+           transform="translate(811.950177058854 399.7246280927602) rotate(0 10.268395770545453 10.268395770545453)">
+            <path d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
+                  stroke="#d3d3d3" stroke-width="2" fill="none"></path>
+        </g>
+        <g stroke-linecap="round"
+           transform="translate(812.9875323058831 367.16602450223724) rotate(0 10.268395770545453 10.268395770545453)">
+            <path d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
+                  stroke="#d3d3d3" stroke-width="2" fill="none"></path>
+        </g>
+        <g stroke-linecap="round"
+           transform="translate(812.9875775122546 334.38499194126695) rotate(0 10.268395770545453 10.268395770545453)">
+            <path d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
+                  stroke="#d3d3d3" stroke-width="2" fill="none"></path>
+        </g>
+        <g stroke-linecap="round"
+           transform="translate(811.9502222652254 304.2712462916388) rotate(0 10.268395770545453 10.268395770545453)">
+            <path d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
+                  stroke="#d3d3d3" stroke-width="2" fill="none"></path>
+        </g>
+        <g stroke-linecap="round"
+           transform="translate(811.9875775122545 274.3051626104358) rotate(0 10.268395770545453 10.268395770545453)">
+            <path d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
+                  stroke="#d3d3d3" stroke-width="2" fill="none"></path>
+        </g>
+        <g stroke-linecap="round"
+           transform="translate(811.987622718626 244.5241300494655) rotate(0 10.268395770545453 10.268395770545453)">
+            <path d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
+                  stroke="#d3d3d3" stroke-width="2" fill="none"></path>
+        </g>
+        <g transform="translate(837.1943798603565 580.1782160523403) rotate(0 67.17048645019531 7.5)">
+            <text x="0" y="11.448" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="12px" fill="#d3d3d3"
+                  text-anchor="start" style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">
+                Полторабатько Максим
+            </text>
+        </g>
+        <g transform="translate(836.7081184669503 551.2614623989341) rotate(0 63.396461486816406 7.5)">
+            <text x="126.79292297363281" y="11.448" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="12px"
+                  fill="#d3d3d3" text-anchor="end" style="white-space: pre;" direction="ltr"
+                  dominant-baseline="alphabetic">Полторабатько Алина
+            </text>
+        </g>
+        <g transform="translate(836.9275984559176 522.8972202445158) rotate(0 46.65632629394531 7.5)">
+            <text x="93.31265258789062" y="11.448" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="12px"
+                  fill="#d3d3d3" text-anchor="end" style="white-space: pre;" direction="ltr"
+                  dominant-baseline="alphabetic">Бондарева Леся
+            </text>
+        </g>
+        <g transform="translate(837.3455849266456 492.7841758132298) rotate(0 51.57636260986328 7.5)">
+            <text x="103.15272521972656" y="11.448" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="12px"
+                  fill="#d3d3d3" text-anchor="end" style="white-space: pre;" direction="ltr"
+                  dominant-baseline="alphabetic">Дубченко Даниил
+            </text>
+        </g>
+        <g transform="translate(836.5947819581856 463.817368310499) rotate(0 47.904327392578125 7.5)">
+            <text x="95.80865478515625" y="11.448" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="12px"
+                  fill="#d3d3d3" text-anchor="end" style="white-space: pre;" direction="ltr"
+                  dominant-baseline="alphabetic">Синюгин Никита
+            </text>
+        </g>
+        <g transform="translate(836.7805302637173 432.68327683113137) rotate(0 35.62225341796875 7.5)">
+            <text x="0" y="11.448" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="12px" fill="#d3d3d3"
+                  text-anchor="start" style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">Шарова
+                Яна
+            </text>
+        </g>
+        <g transform="translate(836.8053421384426 401.48455043440276) rotate(0 45.792327880859375 7.5)">
+            <text x="0" y="11.448" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="12px" fill="#d3d3d3"
+                  text-anchor="start" style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">Шарова
+                Анечка
+            </text>
+        </g>
+        <g transform="translate(837.2752792920547 369.4811002045779) rotate(0 49.42835235595703 7.5)">
+            <text x="0" y="11.448" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="12px" fill="#d3d3d3"
+                  text-anchor="start" style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">Реброва
+                Наталья
+            </text>
+        </g>
+        <g transform="translate(836.720929840327 335.9224627092765) rotate(0 42.59430694580078 7.5)">
+            <text x="0" y="11.448" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="12px" fill="#d3d3d3"
+                  text-anchor="start" style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">Ребров
+                Сергей
+            </text>
+        </g>
+        <g transform="translate(836.6747637772661 307.5827919516904) rotate(0 48.432350158691406 7.5)">
+            <text x="0" y="11.448" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="12px" fill="#d3d3d3"
+                  text-anchor="start" style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">Обухова
+                Любовь
+            </text>
+        </g>
+        <g transform="translate(836.7040064892129 277.1754029750674) rotate(0 43.122314453125 7.5)">
+            <text x="0" y="11.448" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="12px" fill="#d3d3d3"
+                  text-anchor="start" style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">Обухов
+                Виктор
+            </text>
+        </g>
+        <g transform="translate(836.0263057172389 247.616765479766) rotate(0 42.960296630859375 7.5)">
+            <text x="0" y="11.448" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="12px" fill="#d3d3d3"
+                  text-anchor="start" style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">Обухова
+                Елена
+            </text>
+        </g>
+        <g transform="translate(602.8268823058182 248.61676547976595) rotate(0 46.194313049316406 7.5)">
+            <text x="0" y="11.448" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="12px" fill="#d3d3d3"
+                  text-anchor="start" style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">Мишина
+                Оксана
+            </text>
+        </g>
+        <g transform="translate(611.3890739682449 580.2368676976018) rotate(0 41.640281677246094 7.5)">
+            <text x="0" y="11.448" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="12px" fill="#d3d3d3"
+                  text-anchor="start" style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">Жулин
+                Никита
+            </text>
+        </g>
+        <g transform="translate(607.7965088525534 551.9632496492894) rotate(0 43.53630828857422 7.5)">
+            <text x="0" y="11.448" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="12px" fill="#d3d3d3"
+                  text-anchor="start" style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">Лыбаева
+                Злата
+            </text>
+        </g>
+        <g transform="translate(596.2039437368621 522.8972428477015) rotate(0 49.29034423828125 7.5)">
+            <text x="0" y="11.448" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="12px" fill="#d3d3d3"
+                  text-anchor="start" style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">Масьянова
+                Юлия
+            </text>
+        </g>
+        <g transform="translate(603.7965088525534 493.1162102867312) rotate(0 45.654327392578125 7.5)">
+            <text x="0" y="11.448" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="12px" fill="#d3d3d3"
+                  text-anchor="start" style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">Тюрин
+                Дмитрий
+            </text>
+        </g>
+        <g transform="translate(599.9105916720115 433.56440236841956) rotate(0 47.724327087402344 7.5)">
+            <text x="0" y="11.448" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="12px" fill="#d3d3d3"
+                  text-anchor="start" style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">Мишин
+                Дмитрий
+            </text>
+        </g>
+        <g transform="translate(622.5031567877027 401.85465267486813) rotate(0 36.07225799560547 7.5)">
+            <text x="0" y="11.448" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="12px" fill="#d3d3d3"
+                  text-anchor="start" style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">Шаров
+                Иван
+            </text>
+        </g>
+        <g transform="translate(588.9105916720115 370.48110020457796) rotate(0 52.89037322998047 7.5)">
+            <text x="0" y="11.448" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="12px" fill="#d3d3d3"
+                  text-anchor="start" style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">Синюгина
+                Татьяна
+            </text>
+        </g>
+        <g transform="translate(577.9105916720115 336.9225079156478) rotate(0 58.2904052734375 7.5)">
+            <text x="0" y="11.448" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="12px" fill="#d3d3d3"
+                  text-anchor="start" style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">Синюгин
+                Александр
+            </text>
+        </g>
+        <g transform="translate(601.2076972317384 308.0311460300958) rotate(0 46.69232177734375 7.5)">
+            <text x="0" y="11.448" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="12px" fill="#d3d3d3"
+                  text-anchor="start" style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">Синюгина
+                Юлия
+            </text>
+        </g>
+        <g transform="translate(609.7256422661143 279.3604427937073) rotate(0 42.450286865234375 7.5)">
+            <text x="0" y="11.448" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="12px" fill="#d3d3d3"
+                  text-anchor="start" style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">Мишин
+                Сергей
+            </text>
+        </g>
+        <g stroke-linecap="round"
+           transform="translate(241.80074036290807 128.61841599411133) rotate(0 77.55942680931417 27.610226433439152)">
+            <path d="M0 0 C53.69 0, 107.38 0, 155.12 0 M0 0 C34.34 0, 68.69 0, 155.12 0 M155.12 0 C155.12 12.92, 155.12 25.83, 155.12 55.22 M155.12 0 C155.12 15.57, 155.12 31.14, 155.12 55.22 M155.12 55.22 C97.85 55.22, 40.59 55.22, 0 55.22 M155.12 55.22 C96.39 55.22, 37.66 55.22, 0 55.22 M0 55.22 C0 35.33, 0 15.44, 0 0 M0 55.22 C0 41.17, 0 27.11, 0 0"
+                  stroke="#d3d3d3" stroke-width="2" fill="none"></path>
+        </g>
+        <g transform="translate(282.2501894500543 143.72864242755048) rotate(0 37.10997772216797 12.5)">
+            <text x="37.10997772216797" y="19.08" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="20px"
+                  fill="#d3d3d3" text-anchor="middle" style="white-space: pre;" direction="ltr"
+                  dominant-baseline="alphabetic">диджей
+            </text>
+        </g>
+        <g stroke-linecap="round">
+            <g transform="translate(150.02370878219995 75.34644516718998) rotate(0 64.88527374345827 0)">
+                <path d="M0 0 C31.87 0, 63.73 0, 129.77 0 M0 0 C35.99 0, 71.98 0, 129.77 0" stroke="#d3d3d3"
+                      stroke-width="1" fill="none"></path>
+            </g>
+        </g>
+        <mask></mask>
+        <g transform="translate(153.8965052595608 50) rotate(0 63.32813262939453 10)">
+            <text x="0" y="15.264000000000001" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="16px"
+                  fill="#d3d3d3" text-anchor="start" style="white-space: pre;" direction="ltr"
+                  dominant-baseline="alphabetic">заказать музыку
+            </text>
+        </g>
+        <g stroke-linecap="round">
+            <g transform="translate(279.58143778013107 75.24999999999994) rotate(0 19.83936469604558 23.684207997055694)">
+                <path d="M0 0 C0 0.03, 0 0.06, 0 0.08 M0 0 C0 0.02, 0 0.04, 0 0.08 M0 0.08 C0 0.14, 0.03 0.16, 0.08 0.16 M0 0.08 C0 0.14, 0.03 0.16, 0.08 0.16 M0.08 0.16 C5.45 0.16, 10.82 0.16, 23.68 0.16 M0.08 0.16 C7.36 0.16, 14.64 0.16, 23.68 0.16 M23.68 0.16 C34.35 0.16, 39.68 5.5, 39.68 16.16 M23.68 0.16 C34.35 0.16, 39.68 5.5, 39.68 16.16 M39.68 16.16 C39.68 27.82, 39.68 39.49, 39.68 47.37 M39.68 16.16 C39.68 25.55, 39.68 34.95, 39.68 47.37"
+                      stroke="#d3d3d3" stroke-width="1" fill="none"></path>
+            </g>
+            <g transform="translate(279.58143778013107 75.24999999999994) rotate(0 19.83936469604558 23.684207997055694)">
+                <path d="M31.61 25.19 C34.63 33.49, 37.65 41.79, 39.68 47.37 M31.61 25.19 C33.34 29.95, 35.07 34.72, 39.68 47.37"
+                      stroke="#d3d3d3" stroke-width="1" fill="none"></path>
+            </g>
+            <g transform="translate(279.58143778013107 75.24999999999994) rotate(0 19.83936469604558 23.684207997055694)">
+                <path d="M47.75 25.19 C44.73 33.49, 41.71 41.79, 39.68 47.37 M47.75 25.19 C46.02 29.95, 44.28 34.72, 39.68 47.37"
+                      stroke="#d3d3d3" stroke-width="1" fill="none"></path>
+            </g>
+        </g>
+        <mask></mask>
+        <g stroke-linecap="round">
+            <g transform="translate(635.2462256922395 80.3478377773414) rotate(0 -67.21729840194637 -2.842170943040401e-14)">
+                <path d="M0 0 C-37.95 0, -75.89 0, -134.43 0 M0 0 C-35.42 0, -70.84 0, -134.43 0" stroke="#d3d3d3"
+                      stroke-width="1" fill="none"></path>
+            </g>
+        </g>
+        <mask></mask>
+        <g transform="translate(505.6990072108293 54.96646582470521) rotate(0 61.40814208984375 10)">
+            <text x="0" y="15.264000000000001" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="16px"
+                  fill="#d3d3d3" text-anchor="start" style="white-space: pre;" direction="ltr"
+                  dominant-baseline="alphabetic">пожелать удачи
+            </text>
+        </g>
+        <g stroke-linecap="round">
+            <g transform="translate(506.6408909570961 80.21646582470515) rotate(0 -16.11050961983199 21.176363647745518)">
+                <path d="M0 0 C0 0.01, 0 0.01, 0 0.02 M0 0 C0 0.01, 0 0.01, 0 0.02 M0 0.02 C0 0.04, -0.01 0.05, -0.02 0.05 M0 0.02 C0 0.04, -0.01 0.05, -0.02 0.05 M-0.02 0.05 C-5.72 0.05, -11.42 0.05, -16.22 0.05 M-0.02 0.05 C-6.24 0.05, -12.46 0.05, -16.22 0.05 M-16.22 0.05 C-26.89 0.05, -32.22 5.38, -32.22 16.05 M-16.22 0.05 C-26.89 0.05, -32.22 5.38, -32.22 16.05 M-32.22 16.05 C-32.22 23.46, -32.22 30.86, -32.22 42.35 M-32.22 16.05 C-32.22 25.8, -32.22 35.55, -32.22 42.35"
+                      stroke="#d3d3d3" stroke-width="1" fill="none"></path>
+            </g>
+            <g transform="translate(506.6408909570961 80.21646582470515) rotate(0 -16.11050961983199 21.176363647745518)">
+                <path d="M-39.46 22.48 C-37.89 26.79, -36.32 31.1, -32.22 42.35 M-39.46 22.48 C-37.81 26.99, -36.17 31.5, -32.22 42.35"
+                      stroke="#d3d3d3" stroke-width="1" fill="none"></path>
+            </g>
+            <g transform="translate(506.6408909570961 80.21646582470515) rotate(0 -16.11050961983199 21.176363647745518)">
+                <path d="M-24.99 22.48 C-26.56 26.79, -28.13 31.1, -32.22 42.35 M-24.99 22.48 C-26.63 26.99, -28.27 31.5, -32.22 42.35"
+                      stroke="#d3d3d3" stroke-width="1" fill="none"></path>
+            </g>
+        </g>
+        <mask></mask>
+        <g stroke-linecap="round">
+            <g transform="translate(50 238.78436393407307) rotate(0 65.92402048720942 -1.4210854715202004e-14)">
+                <path d="M0 0 C44 0, 88 0, 131.85 0 M0 0 C50.37 0, 100.74 0, 131.85 0" stroke="#d3d3d3" stroke-width="1"
+                      fill="none"></path>
+            </g>
+        </g>
+        <mask></mask>
+        <g transform="translate(55.46987802791233 213.49759205073894) rotate(0 63.45613098144531 10)">
+            <text x="0" y="15.264000000000001" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="16px"
+                  fill="#d3d3d3" text-anchor="start" style="white-space: pre;" direction="ltr"
+                  dominant-baseline="alphabetic">вкусно откушать
+            </text>
+        </g>
+        <g stroke-linecap="round">
+            <g transform="translate(181.40884400205675 238.7475920507389) rotate(0 30.78554516306845 23.743279014116105)">
+                <path d="M0 0 C0 -0.01, 0 -0.01, 0 -0.02 M0 0 C0 -0.01, 0 -0.01, 0 -0.02 M0 -0.02 C0 -0.04, 0.01 -0.04, 0.02 -0.04 M0 -0.02 C0 -0.04, 0.01 -0.04, 0.02 -0.04 M0.02 -0.04 C4.06 -0.04, 8.09 -0.04, 10.79 -0.04 M0.02 -0.04 C3.9 -0.04, 7.77 -0.04, 10.79 -0.04 M10.79 -0.04 C17.98 -0.04, 21.57 3.55, 21.57 10.74 M10.79 -0.04 C17.98 -0.04, 21.57 3.55, 21.57 10.74 M21.57 10.74 C21.57 18.08, 21.57 25.41, 21.57 31.53 M21.57 10.74 C21.57 17.73, 21.57 24.73, 21.57 31.53 M21.57 31.53 C21.57 42.2, 26.9 47.53, 37.57 47.53 M21.57 31.53 C21.57 42.2, 26.9 47.53, 37.57 47.53 M37.57 47.53 C43.05 47.53, 48.53 47.53, 61.57 47.53 M37.57 47.53 C46.27 47.53, 54.98 47.53, 61.57 47.53"
+                      stroke="#d3d3d3" stroke-width="1" fill="none"></path>
+            </g>
+            <g transform="translate(181.40884400205675 238.7475920507389) rotate(0 30.78554516306845 23.743279014116105)">
+                <path d="M42.78 54.37 C47.23 52.75, 51.68 51.13, 61.57 47.53 M42.78 54.37 C47.28 52.73, 51.78 51.09, 61.57 47.53"
+                      stroke="#d3d3d3" stroke-width="1" fill="none"></path>
+            </g>
+            <g transform="translate(181.40884400205675 238.7475920507389) rotate(0 30.78554516306845 23.743279014116105)">
+                <path d="M42.78 40.69 C47.23 42.31, 51.68 43.93, 61.57 47.53 M42.78 40.69 C47.28 42.33, 51.78 43.97, 61.57 47.53"
+                      stroke="#d3d3d3" stroke-width="1" fill="none"></path>
+            </g>
+        </g>
+        <mask></mask>
+        <g stroke-linecap="round">
+            <g transform="translate(176.73072970155977 688.1675983452635) rotate(0 115.57191492935101 -2.842170943040401e-14)">
+                <path d="M0 0 C79.76 0, 159.52 0, 231.14 0 M0 0 C89.94 0, 179.88 0, 231.14 0" stroke="#d3d3d3"
+                      stroke-width="1" fill="none"></path>
+            </g>
+        </g>
+        <mask></mask>
+        <g transform="translate(182.51455116941986 664.4295850283771) rotate(0 108.33622741699219 10.000000000000014)">
+            <text x="0" y="15.264000000000001" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="16px"
+                  fill="#d3d3d3" text-anchor="start" style="white-space: pre;" direction="ltr"
+                  dominant-baseline="alphabetic">выразить эмоции в танце =)
+            </text>
+        </g>
+        <g stroke-linecap="round">
+            <g transform="translate(406.1670600658332 688.1672254278114) rotate(0 17.814270962148584 -25.62961458732724)">
+                <path d="M0 0 C4.52 0, 9.05 0, 19.63 0 M0 0 C6.14 0, 12.28 0, 19.63 0 M19.63 0 C30.3 0, 35.63 -5.33, 35.63 -16 M19.63 0 C30.3 0, 35.63 -5.33, 35.63 -16 M35.63 -16 C35.63 -24.68, 35.63 -33.37, 35.63 -51.26 M35.63 -16 C35.63 -23.66, 35.63 -31.33, 35.63 -51.26"
+                      stroke="#d3d3d3" stroke-width="1" fill="none"></path>
+            </g>
+            <g transform="translate(406.1670600658332 688.1672254278114) rotate(0 17.814270962148584 -25.62961458732724)">
+                <path d="M44.18 -27.77 C42.21 -33.18, 40.24 -38.6, 35.63 -51.26 M44.18 -27.77 C41.5 -35.12, 38.83 -42.47, 35.63 -51.26"
+                      stroke="#d3d3d3" stroke-width="1" fill="none"></path>
+            </g>
+            <g transform="translate(406.1670600658332 688.1672254278114) rotate(0 17.814270962148584 -25.62961458732724)">
+                <path d="M27.08 -27.77 C29.05 -33.18, 31.02 -38.6, 35.63 -51.26 M27.08 -27.77 C29.75 -35.12, 32.43 -42.47, 35.63 -51.26"
+                      stroke="#d3d3d3" stroke-width="1" fill="none"></path>
+            </g>
+        </g>
+        <mask></mask>
+    </svg>
 
-          @font-face {
-              font-family: Nunito;
-              src: url(data:font/woff2;base64,d09GMgABAAAAAAJMAA4AAAAABOwAAAH2AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGx4cLgZgP1NUQVREADQRCAoALAsGAAE2AiQDCAQgBYQkByAbHQTILgfsBv1b1cywR8Vqppfgraj2JBx9ZIRKTlCtvd+ztxcglgQqEkGnYkmYCB9hSMbIKAv00bN7l2u5eSBNFPlEZQVIR7g/uU3Bu8rKZukXVn76BjMGHK6yD6YDWESTu19AmIaBc1VN9bBT7XIi3wINE44oDTTgQNsDmuhoA5/YOB7oAZ3IQGBQm8NkMXwTMR5jPAuL5oECdQbUsdX1kxvIyFABAnUm9cXhfrl/hA/5USiEPOBwP6fl+K0kXaeAnV4Sp+oZIxYS5PhX4NcIXr8OeSkmR7AbiK9pjIgLoUZChxgmxK7ObGK4WMVnIXRIKIQUowCBgCjjN0go0CEu0CFhBMiywMird1Q+BAhRoRkkkIWXtQsU94P7r+rmlT81RfETnrqF13lE82RuAaokEHwfDwFkjlFTKX6bT4lAciLpUkIAgCxQ71ohci0e/F8RZv2JpMmjKKz67GcWpT4vvMq0YRE0GAsYtAuWtO5Mo3I4hgKK0CmDziEFDhGFz6G5Z3BYbOSMFHIQtOsbERQnNBwYzDsGIbqKQtzM0LKx6dgbzpw7s1vTDK+2LZJPIe6mebp8fRta+CHouamxiTnuhs3Ajd9/QUAug4ZwmyRiQ0KEa7MRshBZNzJicRCbpBrSoMCIBSGLz2BCIRIZCR/ljjiFKjcAAAAA);
-          }</style>
-    </defs>
-    <rect x="0" y="0" width="877.514000546342" height="626.3999938964844" fill="var(--color-bg)"></rect>
-    <g stroke-linecap="round" transform="translate(75.19030621983194 50) rotate(0 376.16184716325506 263.1999969482422)">
-      <path
-          d="M0 0 C270.7 0, 541.4 0, 752.32 0 M0 0 C174.18 0, 348.37 0, 752.32 0 M752.32 0 C752.32 154.61, 752.32 309.22, 752.32 526.4 M752.32 0 C752.32 162.46, 752.32 324.92, 752.32 526.4 M752.32 526.4 C470.13 526.4, 187.94 526.4, 0 526.4 M752.32 526.4 C465.53 526.4, 178.73 526.4, 0 526.4 M0 526.4 C0 394.86, 0 263.33, 0 0 M0 526.4 C0 359.56, 0 192.72, 0 0"
-          stroke="#d3d3d3" stroke-width="2" fill="none"></path>
-    </g>
-    <g stroke-linecap="round" transform="translate(576.969777720338 80.14964574554153) rotate(0 34.85039924521351 197.44001911834087)">
-      <path
-          d="M0 0 C21.08 0, 42.15 0, 69.7 0 M0 0 C16.74 0, 33.49 0, 69.7 0 M69.7 0 C69.7 133.87, 69.7 267.74, 69.7 394.88 M69.7 0 C69.7 118.02, 69.7 236.04, 69.7 394.88 M69.7 394.88 C48.52 394.88, 27.34 394.88, 0 394.88 M69.7 394.88 C43.29 394.88, 16.87 394.88, 0 394.88 M0 394.88 C0 307.52, 0 220.17, 0 0 M0 394.88 C0 258.97, 0 123.07, 0 0"
-          stroke="#d3d3d3" stroke-width="2" fill="none"></path>
-    </g>
-    <g stroke-linecap="round"
-       transform="translate(585.9454073639571 455.15001727503363) rotate(89.81397115618928 25.208413801148936 45.420543822702186)">
-      <path
-          d="M0 0 C16.87 0, 33.74 0, 50.42 0 M0 0 C14.32 0, 28.64 0, 50.42 0 M50.42 0 C50.42 20.88, 50.42 41.77, 50.42 90.84 M50.42 0 C50.42 20.7, 50.42 41.39, 50.42 90.84 M50.42 90.84 C36.14 90.84, 21.86 90.84, 0 90.84 M50.42 90.84 C32.08 90.84, 13.74 90.84, 0 90.84 M0 90.84 C0 64.96, 0 39.07, 0 0 M0 90.84 C0 56.32, 0 21.81, 0 0"
-          stroke="#d3d3d3" stroke-width="2" fill="none"></path>
-    </g>
-    <g stroke-linecap="round" transform="translate(547.7203863679435 89.6376988972529) rotate(0 10.268395770545453 10.268395770545453)">
-      <path
-          d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
-          stroke="#d3d3d3" stroke-width="2" fill="none"></path>
-    </g>
-    <g stroke-linecap="round" transform="translate(654.031545559792 90.57118834276051) rotate(0 10.268395770545453 10.268395770545453)">
-      <path
-          d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
-          stroke="#d3d3d3" stroke-width="2" fill="none"></path>
-    </g>
-    <g stroke-linecap="round" transform="translate(548.3962490789311 122.3538705822879) rotate(0 10.268395770545453 10.268395770545453)">
-      <path
-          d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
-          stroke="#d3d3d3" stroke-width="2" fill="none"></path>
-    </g>
-    <g stroke-linecap="round" transform="translate(654.7074082707795 123.28736002779547) rotate(0 10.268395770545453 10.268395770545453)">
-      <path
-          d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
-          stroke="#d3d3d3" stroke-width="2" fill="none"></path>
-    </g>
-    <g stroke-linecap="round" transform="translate(548.3962015990819 153.73629491362942) rotate(0 10.268395770545453 10.268395770545453)">
-      <path
-          d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
-          stroke="#d3d3d3" stroke-width="2" fill="none"></path>
-    </g>
-    <g stroke-linecap="round" transform="translate(654.7073607909304 154.669784359137) rotate(0 10.268395770545453 10.268395770545453)">
-      <path
-          d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
-          stroke="#d3d3d3" stroke-width="2" fill="none"></path>
-    </g>
-    <g stroke-linecap="round" transform="translate(549.0184725029294 182.49636525138718) rotate(0 10.268395770545453 10.268395770545453)">
-      <path
-          d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
-          stroke="#d3d3d3" stroke-width="2" fill="none"></path>
-    </g>
-    <g stroke-linecap="round" transform="translate(655.3296316947778 183.4298546968948) rotate(0 10.268395770545453 10.268395770545453)">
-      <path
-          d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
-          stroke="#d3d3d3" stroke-width="2" fill="none"></path>
-    </g>
-    <g stroke-linecap="round" transform="translate(548.9917952989827 212.6454409612764) rotate(0 10.268395770545453 10.268395770545453)">
-      <path
-          d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
-          stroke="#d3d3d3" stroke-width="2" fill="none"></path>
-    </g>
-    <g stroke-linecap="round" transform="translate(655.3029544908311 213.57893040678402) rotate(0 10.268395770545453 10.268395770545453)">
-      <path
-          d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
-          stroke="#d3d3d3" stroke-width="2" fill="none"></path>
-    </g>
-    <g stroke-linecap="round" transform="translate(549.66765800997 245.3616126463114) rotate(0 10.268395770545453 10.268395770545453)">
-      <path
-          d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
-          stroke="#d3d3d3" stroke-width="2" fill="none"></path>
-    </g>
-    <g stroke-linecap="round" transform="translate(655.9788172018184 246.295102091819) rotate(0 10.268395770545453 10.268395770545453)">
-      <path
-          d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
-          stroke="#d3d3d3" stroke-width="2" fill="none"></path>
-    </g>
-    <g stroke-linecap="round" transform="translate(549.6676105301208 277.7440369776529) rotate(0 10.268395770545453 10.268395770545453)">
-      <path
-          d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
-          stroke="#d3d3d3" stroke-width="2" fill="none"></path>
-    </g>
-    <g stroke-linecap="round" transform="translate(655.9787697219692 278.6775264231605) rotate(0 10.268395770545453 10.268395770545453)">
-      <path
-          d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
-          stroke="#d3d3d3" stroke-width="2" fill="none"></path>
-    </g>
-    <g stroke-linecap="round" transform="translate(550.2898814339685 309.5041073154107) rotate(0 10.268395770545453 10.268395770545453)">
-      <path
-          d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
-          stroke="#d3d3d3" stroke-width="2" fill="none"></path>
-    </g>
-    <g stroke-linecap="round" transform="translate(656.601040625817 310.43759676091827) rotate(0 10.268395770545453 10.268395770545453)">
-      <path
-          d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
-          stroke="#d3d3d3" stroke-width="2" fill="none"></path>
-    </g>
-    <g stroke-linecap="round" transform="translate(550.2364320663764 341.2868251648251) rotate(0 10.268395770545453 10.268395770545453)">
-      <path
-          d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
-          stroke="#d3d3d3" stroke-width="2" fill="none"></path>
-    </g>
-    <g stroke-linecap="round" transform="translate(656.5475912582249 342.2203146103327) rotate(0 10.268395770545453 10.268395770545453)">
-      <path
-          d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
-          stroke="#d3d3d3" stroke-width="2" fill="none"></path>
-    </g>
-    <g stroke-linecap="round" transform="translate(550.9122947773637 372.0029968498601) rotate(0 10.268395770545453 10.268395770545453)">
-      <path
-          d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
-          stroke="#d3d3d3" stroke-width="2" fill="none"></path>
-    </g>
-    <g stroke-linecap="round" transform="translate(657.2234539692122 372.9364862953677) rotate(0 10.268395770545453 10.268395770545453)">
-      <path
-          d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
-          stroke="#d3d3d3" stroke-width="2" fill="none"></path>
-    </g>
-    <g stroke-linecap="round" transform="translate(550.9122472975146 406.3854211812016) rotate(0 10.268395770545453 10.268395770545453)">
-      <path
-          d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
-          stroke="#d3d3d3" stroke-width="2" fill="none"></path>
-    </g>
-    <g stroke-linecap="round" transform="translate(657.223406489363 407.31891062670917) rotate(0 10.268395770545453 10.268395770545453)">
-      <path
-          d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
-          stroke="#d3d3d3" stroke-width="2" fill="none"></path>
-    </g>
-    <g stroke-linecap="round" transform="translate(551.5345182013623 441.1454915189594) rotate(0 10.268395770545453 10.268395770545453)">
-      <path
-          d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
-          stroke="#d3d3d3" stroke-width="2" fill="none"></path>
-    </g>
-    <g stroke-linecap="round" transform="translate(657.8456773932107 442.078980964467) rotate(0 10.268395770545453 10.268395770545453)">
-      <path
-          d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
-          stroke="#d3d3d3" stroke-width="2" fill="none"></path>
-    </g>
-    <g stroke-linecap="round" transform="translate(579.6884038526284 533.4418046129863) rotate(0 10.268395770545453 10.268395770545453)">
-      <path
-          d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
-          stroke="#d3d3d3" stroke-width="2" fill="none"></path>
-    </g>
-    <g stroke-linecap="round" transform="translate(625.9995630444769 533.3752940584939) rotate(0 10.268395770545453 10.268395770545453)">
-      <path
-          d="M20.54 10.27 C20.54 10.86, 20.48 11.47, 20.38 12.05 C20.28 12.64, 20.12 13.22, 19.92 13.78 C19.71 14.34, 19.46 14.89, 19.16 15.4 C18.86 15.92, 18.52 16.41, 18.13 16.87 C17.75 17.32, 17.32 17.75, 16.87 18.13 C16.41 18.52, 15.92 18.86, 15.4 19.16 C14.89 19.46, 14.34 19.71, 13.78 19.92 C13.22 20.12, 12.64 20.28, 12.05 20.38 C11.47 20.48, 10.86 20.54, 10.27 20.54 C9.67 20.54, 9.07 20.48, 8.49 20.38 C7.9 20.28, 7.31 20.12, 6.76 19.92 C6.2 19.71, 5.65 19.46, 5.13 19.16 C4.62 18.86, 4.12 18.52, 3.67 18.13 C3.21 17.75, 2.78 17.32, 2.4 16.87 C2.02 16.41, 1.67 15.92, 1.38 15.4 C1.08 14.89, 0.82 14.34, 0.62 13.78 C0.42 13.22, 0.26 12.64, 0.16 12.05 C0.05 11.47, 0 10.86, 0 10.27 C0 9.67, 0.05 9.07, 0.16 8.49 C0.26 7.9, 0.42 7.31, 0.62 6.76 C0.82 6.2, 1.08 5.65, 1.38 5.13 C1.67 4.62, 2.02 4.12, 2.4 3.67 C2.78 3.21, 3.21 2.78, 3.67 2.4 C4.12 2.02, 4.62 1.67, 5.13 1.38 C5.65 1.08, 6.2 0.82, 6.76 0.62 C7.31 0.42, 7.9 0.26, 8.49 0.16 C9.07 0.05, 9.67 0, 10.27 0 C10.86 0, 11.47 0.05, 12.05 0.16 C12.64 0.26, 13.22 0.42, 13.78 0.62 C14.34 0.82, 14.89 1.08, 15.4 1.38 C15.92 1.67, 16.41 2.02, 16.87 2.4 C17.32 2.78, 17.75 3.21, 18.13 3.67 C18.52 4.12, 18.86 4.62, 19.16 5.13 C19.46 5.65, 19.71 6.2, 19.92 6.76 C20.12 7.31, 20.28 7.9, 20.38 8.49 C20.48 9.07, 20.51 9.97, 20.54 10.27 C20.56 10.57, 20.56 9.97, 20.54 10.27"
-          stroke="#d3d3d3" stroke-width="2" fill="none"></path>
-    </g>
-    <g stroke-linecap="round">
-      <g transform="translate(76.42325396010176 150.46840749741114) rotate(0.14723369339116504 0 59.95362250407868)">
-        <path d="M0 0 C0 31.8, 0 63.6, 0 119.91 M0 0 C0 46.93, 0 93.85, 0 119.91" stroke="#d3d3d3" stroke-width="2" fill="none"></path>
-      </g>
-    </g>
-    <mask></mask>
-    <g stroke-linecap="round">
-      <g transform="translate(77.21199870682003 150.5515518137298) rotate(0.14723369339116504 31.566674858657166 59.95362250407868)">
-        <path
-            d="M0 0 C4.34 0.53, 17.22 -0.92, 26.03 3.16 C34.84 7.23, 46.67 14.99, 52.85 24.45 C59.03 33.92, 63.5 47.86, 63.11 59.95 C62.71 72.05, 57.06 87.56, 50.49 97.03 C43.91 106.5, 32.08 112.94, 23.67 116.75 C15.25 120.56, 3.94 119.38, 0 119.91 M0 0 C4.34 0.53, 17.22 -0.92, 26.03 3.16 C34.84 7.23, 46.67 14.99, 52.85 24.45 C59.03 33.92, 63.5 47.86, 63.11 59.95 C62.71 72.05, 57.06 87.56, 50.49 97.03 C43.91 106.5, 32.08 112.94, 23.67 116.75 C15.25 120.56, 3.94 119.38, 0 119.91"
-            stroke="#d3d3d3" stroke-width="2" fill="none"></path>
-      </g>
-    </g>
-    <mask></mask>
-    <g stroke-linecap="round">
-      <g transform="translate(76.09220933844631 361.5577461252791) rotate(0.14723369339116504 0 59.95362250407868)">
-        <path d="M0 0 C0 40.3, 0 80.61, 0 119.91 M0 0 C0 30.05, 0 60.1, 0 119.91" stroke="#d3d3d3" stroke-width="2" fill="none"></path>
-      </g>
-    </g>
-    <mask></mask>
-    <g stroke-linecap="round">
-      <g transform="translate(76.88095408516455 361.6408904415978) rotate(0.14723369339116504 31.566674858657166 59.95362250407868)">
-        <path
-            d="M0 0 C4.34 0.53, 17.22 -0.92, 26.03 3.16 C34.84 7.23, 46.67 14.99, 52.85 24.45 C59.03 33.92, 63.5 47.86, 63.11 59.95 C62.71 72.05, 57.06 87.56, 50.49 97.03 C43.91 106.5, 32.08 112.94, 23.67 116.75 C15.25 120.56, 3.94 119.38, 0 119.91 M0 0 C4.34 0.53, 17.22 -0.92, 26.03 3.16 C34.84 7.23, 46.67 14.99, 52.85 24.45 C59.03 33.92, 63.5 47.86, 63.11 59.95 C62.71 72.05, 57.06 87.56, 50.49 97.03 C43.91 106.5, 32.08 112.94, 23.67 116.75 C15.25 120.56, 3.94 119.38, 0 119.91"
-            stroke="#d3d3d3" stroke-width="2" fill="none"></path>
-      </g>
-    </g>
-    <mask></mask>
-    <g transform="translate(58.70204350596663 195.76298100332497) rotate(270.43700904857707 37.319984436035156 12.5)">
-      <text x="0" y="19.08" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="20px" fill="#d3d3d3" text-anchor="start"
-            style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">фуршет
-      </text>
-    </g>
-    <g transform="translate(58.30321847664942 408.70147930868575) rotate(270.43700904857707 37.319984436035156 12.5)">
-      <text x="0" y="19.08" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="20px" fill="#d3d3d3" text-anchor="start"
-            style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">фуршет
-      </text>
-    </g>
-    <g stroke-linecap="round" transform="translate(170.82049712436077 163.02512905228656) rotate(0 102.55226960991678 155.01171187055462)">
-      <path
-          d="M0 0 C69.83 0, 139.67 0, 205.1 0 M205.1 0 C205.1 99.73, 205.1 199.46, 205.1 310.02 M205.1 310.02 C147.34 310.02, 89.57 310.02, 0 310.02 M0 310.02 C0 188, 0 65.98, 0 0"
-          stroke="#33383d" stroke-width="2.5" fill="none" stroke-dasharray="8 10"></path>
-    </g>
-    <g transform="translate(250.0 305.5368409228412) rotate(0 39.17998504638672 12.5)">
-      <text x="39.17998504638672" y="19.08" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="20px" fill="#6e757c" text-anchor="middle"
-            style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">танцпол
-      </text>
-    </g>
-    <g stroke-linecap="round" transform="translate(171.6093486996412 504.6030972887548) rotate(0 102.1578438222765 27.610226433439152)">
-      <path
-          d="M0 0 C47.45 0, 94.89 0, 204.32 0 M204.32 0 C204.32 14.45, 204.32 28.91, 204.32 55.22 M204.32 55.22 C130.52 55.22, 56.72 55.22, 0 55.22 M0 55.22 C0 34.9, 0 14.57, 0 0"
-          stroke="#33383d" stroke-width="2.5" fill="none" stroke-dasharray="8 10"></path>
-    </g>
-    <g transform="translate(245.0 519.713323722194) rotate(0 46.019981384277344 12.5)">
-      <text x="46.019981384277344" y="19.08" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="20px" fill="#33383d" text-anchor="middle"
-            style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">фотозона
-      </text>
-    </g>
-    <g stroke-linecap="round" transform="translate(171.21486272648377 80.19441965921044) rotate(0 102.1578438222765 27.610226433439152)">
-      <path
-          d="M0 0 C56.24 0, 112.47 0, 204.32 0 M0 0 C65.11 0, 130.21 0, 204.32 0 M204.32 0 C204.32 17.2, 204.32 34.39, 204.32 55.22 M204.32 0 C204.32 11.14, 204.32 22.28, 204.32 55.22 M204.32 55.22 C163.4 55.22, 122.48 55.22, 0 55.22 M204.32 55.22 C141.34 55.22, 78.37 55.22, 0 55.22 M0 55.22 C0 36.25, 0 17.28, 0 0 M0 55.22 C0 35.56, 0 15.9, 0 0"
-          stroke="#d3d3d3" stroke-width="2" fill="none"></path>
-    </g>
-    <g transform="translate(235.33275140960012 95.30464609264959) rotate(0 59.039955139160156 12.5)">
-      <text x="59.039955139160156" y="19.08" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="20px" fill="#d3d3d3" text-anchor="middle"
-            style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">зона отдыха
-      </text>
-    </g>
-    <g transform="translate(522.7704212052697 532.0761500774599) rotate(0 23.743980407714844 10)">
-      <text x="0" y="15.264000000000001" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="16px" fill="#d3d3d3" text-anchor="start"
-            style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">Элина
-      </text>
-    </g>
-    <g transform="translate(655.2700333767361 532.8001799015801) rotate(0 23.823974609375 10)">
-      <text x="0" y="15.264000000000001" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="16px" fill="#d3d3d3" text-anchor="start"
-            style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">Павел
-      </text>
-    </g>
-    <g transform="translate(39.990013122558594 265.0) rotate(270 22.509986877441406 12.5)">
-      <text x="45.01997375488281" y="19.08" font-family="Nunito, sans-serif, Segoe UI Emoji" font-size="20px" fill="#d3d3d3" text-anchor="end"
-            style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">вход
-      </text>
-    </g>
-    <g stroke-linecap="round">
-      <g transform="translate(74.04858486706871 270.56741193153675) rotate(0 -2.9270945709331784 0)">
-        <path d="M0 0 C-2.28 0, -4.56 0, -5.85 0 M0 0 C-1.37 0, -2.75 0, -5.85 0" stroke="#d3d3d3" stroke-width="2" fill="none"></path>
-      </g>
-    </g>
-    <mask></mask>
-    <g stroke-linecap="round">
-      <g transform="translate(74.12149029613556 361.7253815017594) rotate(0 -2.9270945709331784 0)">
-        <path d="M0 0 C-1.51 0, -3.03 0, -5.85 0 M0 0 C-1.55 0, -3.1 0, -5.85 0" stroke="#d3d3d3" stroke-width="2" fill="none"></path>
-      </g>
-    </g>
-    <mask></mask>
-  </svg>
+    <!--<script type="module" src="src/guestmap.js"></script>-->
+</div>
+<div class="container hero">
+    <h2>Иногородние гости</h2>
+    <br>
+    <p>Чтобы вам не пришлось беспокоиться о ночлеге, мы рады пригласить вас провести ночь после праздника в отеле «На Пушкинской».
+      Назовите свои имена администратору для размещения.</p>
+
+    <div class="two-columns">
+        <div class="hero">
+            <h1>Отель</h1>
+            <br>
+            <h1>«На Пушкинской»</h1>
+            <br>
+            <p>г. Воронеж, ул. Пушкинская, д. 22</p>
+        </div>
+        <div class="hero">
+            <h2>Заселение:</h2>
+            <br><br><br>
+            <p>10.10.2026</p>
+            <p>с <b>14:00</b></p>
+            <br><br><br>
+            <h2>Выселение:</h2>
+            <br><br><br>
+            <p>11.10.2026</p>
+            <p>с <b>12:00</b></p>
+        </div>
+        <iframe id="map_625670829" frameborder="0" width="100%" height="600px"
+                src="https://makemap.2gis.ru/widget?data=eJw1kFFvmzAUhf-L91jUGUMBI_UhM1pK5UUxe5jSqQ9Z7DFHBFNzCUuj_PddJyuP_s79ODpn4rw23uilcQcD3pqRlD_PBE6DISX5arYweUMiMng3GA9XfiY71zmP_BNlRfybIQcLXbigz3nTgoipPDZ7UYk3LjSVi5Y-f25avqyp9GpaCU43T2oCcUdlL6b58REV2ow7bwewrkfR-mmB8NtUr8R3KlG6CuFEgRZMigplIpe2Uj1fVnSzD7IUedNqkVFZNfvT3FKpprqqTwJEg4XCjxkyNelQJGQqdYTlF7qRagylZK5GCPeLdn47qgME96_GcvFO5V4dtZhnPxYyWdxh4fe61-YvKWP68V0i0t6GPIWZ_q-4drYHzO8cjm37LVxHTvh9zGMWs-ghvs8eeELTV7y3mpQpSy-vETlsh7Ub7W2QM-m2QMpblmYsZ1mWJJxFpAv4ZsuSIucsL_IkTbGfcwdsV6AVl3Vd9-OPMd3L9RX8ZC7_AHUFnF8"
+                sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"></iframe>
+    </div>
+
+    <br>
+    <br>
+    <br>
 </div>
 
-<!--<script type="module" src="src/guestmap.js"></script>-->
 
 </body>
 </html>
